@@ -118,9 +118,9 @@ body,p,ul,ol,dl,textarea,input {font-family: 'LeagueGothic'; font-size:25px;}
 .rotate90 { -webkit-transform: rotate(90deg);-moz-transform: rotate(90deg);-ms-transform: rotate(90deg);-o-transform: rotate(90deg);transform: rotate(90deg);zoom: 1;}
 .rotate270{ -webkit-transform: rotate(270deg);-moz-transform: rotate(270deg);-ms-transform: rotate(270deg);-o-transform: rotate(270deg);transform: rotate(270deg);zoom: 1;}
 
-.noise{background-image:url('images/noise.png');}
+/**.noise{background-image:url('images/noise.png');}
 .dust{background-image:url('images/dust.png');}
-.fabric{background-image:url('images/canvas.png');}
+.fabric{background-image:url('images/canvas.png');}**/
 .vignette{}
 /* look at https://gist.github.com/1387878*/
 

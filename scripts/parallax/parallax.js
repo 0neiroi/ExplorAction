@@ -161,12 +161,12 @@ var parallax = {
 		}
 	},
 
-	slideBackground : function(newLocation){
+	/**slideBackground : function(newLocation){
 		if(typeof this.background !== 'undefined' && typeof newLocation !== 'undefined'){
 			$(this.background).animate({
 				'background-position-x': '+=' + -newLocation.left * parallax.scaling + 'px',
 				'background-position-y': '+=' + -newLocation.top * parallax.scaling + 'px',
 				}, parallax.speed, parallax.easing);
 		}
-	},
+	},**/
 };

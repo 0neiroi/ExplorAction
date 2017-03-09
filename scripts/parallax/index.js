@@ -1,5 +1,6 @@
 var rightKey, leftKey, topKey, bottomKey;
 
+
 $(document).ready(function () {
 
 	//Set up the triggers for the arrow keys
@@ -21,7 +22,8 @@ $(document).ready(function () {
 			.add($("#sandbox"))
 			.add($("#recherche"));
 
-	parallax.background = $("body");
+	// parallax.background = $("body");
+
 
 	//Clears each page navigation on load
 	parallax.preload = function(){
@@ -128,4 +130,30 @@ $(document).ready(function () {
 	$(".control").hide();
 	parallax.index.show();
 
+
 });
+
+ /** Animation du fond :  **/
+
+$(function(){
+
+    	  $('#midground_1').css({backgroundPosition: '0px 0px'});
+     	 $('#foreground_1').css({backgroundPosition: '0px 0px'});
+      $('#background').css({backgroundPosition: '0px 0px'});
+
+        $('#midground_1').animate({
+            backgroundPosition:"(-10000px -2000px)"
+        }, 240000, 'linear');
+
+        $('#foreground_1').animate({
+            backgroundPosition:"(-10000px -2000px)"
+        }, 120000, 'linear');
+
+        $('#background').animate({
+            backgroundPosition:"(-10000px -2000px)"
+        }, 480000, 'linear');
+
+    });
+ 
+
+	 

@@ -2,9 +2,33 @@ body{
 	overflow:hidden;
 }
 
+/**Background animé **/
+#background {
+    background: url(../img/parallax/background.png) repeat 5% 5%;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 100;
+}
+
+#midground_1 {
+    background: url(../img/parallax/midground.png) repeat 20% 20%;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 200;
+}
+
+#foreground_1 {
+    background: url(../img/parallax/foreground.png) repeat 90% 110%;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 300;
+}
+
+/**
 .background{
 	background-image: url(../img/parallax/dark_geometric2.png);
 }
+**/
 
 .noanchor:link, .noanchor:visited, .noanchor:active {
 	text-decoration: none;
