@@ -145,3 +145,94 @@ Sauf exception la racine des chemins sera toujours framework.
 
 ![alt text](https://media.giphy.com/media/yiYJLX05aQ0FO/200.gif "Yes")
   
+
+##### MVC Pattern
+  
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/4Qfk8MhtZJU/0.jpg)](http://www.youtube.com/watch?v=4Qfk8MhtZJU)
+
+Maintenant que tu sais ce qu'est le modèle MVC, on peut passer aux choses sérieuses. A partir d'ici il n'y a plus de distinction entre linux et windows est c'est bien là l'intérer du MVC et c'est aussi du au fait que passe vraiment à la programmation.
+
+Dans le dossier framework/app on a trois dossiers :
+  * Controllers
+  * Models
+  * Views 
+Il nous faudra un fichier dans Models par table de notre BDD, un fichier dans Views par affichage différent et un fichier dans Controllers par fonctionnalité.
+
+Dans ce premier exemple nous allons utiliser ce modèle pour afficher le contenu de la table metier.
+Avant d'utiliser cette exemple n'oubliez pas d'importer le fichier sql fourni dans le dépôt à votre phpmyadmin. 
+
+1. Views
+
+  * Dessiner l'affichage global des pages dans un fichier que vous nommerez default.tpl.php et il sera à placer dans le dossier layouts de framework/app/Views
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Exploraction</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
+	</head>
+	<body>
+		<h1>Explor'action</h1>
+		<?php $this->yields('default');?>
+	</body>
+</html>
+```
+  * Dessiner l'affichage spécifique du contenu des médias dans un fichier que vous nommerez index.tpl.php et il sera à placer dans un dossier metiers dans framework/app/Views
+```php
+<?php
+$metiers = $this->get('metiers');
+var_dump($metiers);
+?>
+<h2> Liste des métiers </h2>
+```
+
+2. Models
+  * Créer la classe Metier correspondant à la table metier de la base de données. Pour ce faire, écriver le code suivant dans un fichier Metier.php à placer dans le dossier framework/app/Models
+```php
+<?php
+namespace App\Models;
+
+use Pragma\ORM\Model;
+
+class Metier extends Model{
+	const TABLENAME = 'metier';
+
+	public function __construct(){
+		return parent::__construct(self::TABLENAME);
+	}
+}
+?>
+```  
+
+3. Controllers 
+  * Dernière étape "que faire avec quoi" écrire le code suivant dans un fichier MetiersController.php du dossier framework/app/Controllers
+
+```php
+
+<?php
+namespace App\Controllers;
+
+use Pragma\Controller\BaseController;
+use App\Models\Metier;
+
+class MetiersController extends BaseController{
+	public function index(){
+		$this->view->assign('metiers',Metier::all());
+		$this->view->render('metiers/index.tpl.php');
+	}
+}
+?>
+
+```
+
+4. De retour dans le fichier index.php du dossier framework/public, décommenter les 4 lignes $view
+5. Ajouter le bout de code suivant après la section $app->get :
+```php
+$app->group('/metiers',function() use ($app){
+	$app->get('',function(){
+		(new App\Controllers\MetiersController())->index();
+	});
+
+});
+``` 
+6. Alors ça marche ?!
