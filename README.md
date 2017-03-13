@@ -85,8 +85,7 @@ Sauf exception la racine des chemins sera toujours framework.
 2. Création d'un VirtualHost
   * Pour éviter polluer les fichiers de base de wamp vous allez créer un nouveau fichier exploraction.conf dans le dossier C:\wamp64\bin\apache\apache2.X.XX\conf\extra
   * Ecrire le contenu suivant dans le fichier créé :
-  
-  <Code>
+  ```  
 	<VirtualHost *:80>
         ServerName exploraction
         DocumentRoot C:\wamp64\www\framework\public
@@ -98,7 +97,7 @@ Sauf exception la racine des chemins sera toujours framework.
           Require all granted
         </Directory>
     </VirtualHost>
-  </Code>  
+  ```  
   
 3. Autorisation de VirtualHost
   * Ajouter la ligne "Include conf/extra/exploraction.conf" dans la section VirtualHost du fichier httpd.conf du dossier C:\wamp64\bin\apache\apache2.X.XX\conf\
@@ -121,29 +120,19 @@ Sauf exception la racine des chemins sera toujours framework.
 2. Création d'un VirtualHost
   * Pour éviter polluer les fichiers de base de apache vous allez créer un nouveau fichier exploraction.conf dans le dossier /etc/apache2/sites-enabled
   * Ecrire le contenu suivant dans le fichier créé :
-  
-  >  <VirtualHost *:80>
-  
-  >    ServerName exploraction
-  
-  >    DocumentRoot /var/www/framework/public
-  
-  >    CustomLog  /var/log/apache2/exploraction_access.log combined
-  
-  >    ErrorLog  /var/log/apache2/exploraction_error.log
-  
-  >    <Directory /var/www/framework/public>
-  
-  >      Options Indexes FollowSymLinks
-  
-  >      AllowOverride None
-  
-  >      Require all granted
-  
-  >    </Directory>
-  
-  >  </VirtualHost>
-  
+  ```
+  <VirtualHost *:80>
+    ServerName exploraction
+    DocumentRoot /var/www/framework/public
+    CustomLog  /var/log/apache2/exploraction_access.log combined
+    ErrorLog  /var/log/apache2/exploraction_error.log
+    <Directory /var/www/framework/public>
+      Options Indexes FollowSymLinks
+      AllowOverride None
+      Require all granted
+    </Directory>
+  </VirtualHost>
+  ```  
 3. Autorisation de VirtualHost
   * Taper la commande a2ensite exploraction.conf dans votre terminale
   * Vérifier que le module rewrite soit activé avec la commande a2enmod rewrite
