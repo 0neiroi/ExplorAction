@@ -86,27 +86,19 @@ Sauf exception la racine des chemins sera toujours framework.
   * Pour éviter polluer les fichiers de base de wamp vous allez créer un nouveau fichier exploraction.conf dans le dossier C:\wamp64\bin\apache\apache2.X.XX\conf\extra
   * Ecrire le contenu suivant dans le fichier créé :
   
-  `  <VirtualHost *:80>
-  
-      ServerName exploraction
-  
-      DocumentRoot C:\wamp64\www\framework\public
-  
-      CustomLog  C:\wamp64\logs\exploraction_access.log combined
-  
-      ErrorLog  C:\wamp64\logs\exploraction_error.log
-  
-      <Directory C:\wamp64\www\framework\public>
-  
-        Options Indexes FollowSymLinks
-  
-        AllowOverride None
-  
-        Require all granted
-  
+  <Code>
+	<VirtualHost *:80>
+        ServerName exploraction
+        DocumentRoot C:\wamp64\www\framework\public
+        CustomLog  C:\wamp64\logs\exploraction_access.log combined
+        ErrorLog  C:\wamp64\logs\exploraction_error.log
+		<Directory C:\wamp64\www\framework\public>
+          Options Indexes FollowSymLinks
+          AllowOverride None
+          Require all granted
         </Directory>
-  
-    </VirtualHost> `
+    </VirtualHost>
+  </Code>  
   
 3. Autorisation de VirtualHost
   * Ajouter la ligne "Include conf/extra/exploraction.conf" dans la section VirtualHost du fichier httpd.conf du dossier C:\wamp64\bin\apache\apache2.X.XX\conf\
