@@ -85,24 +85,37 @@ Sauf exception la racine des chemins sera toujours framework.
   * Pour éviter polluer les fichiers de base de wamp vous allez créer un nouveau fichier exploraction.conf dans le dossier C:\wamp64\bin\apache\apache2.X.XX\conf\extra
   * Ecrire le contenu suivant dans le fichier créé :
   ><VirtualHost *:80>
+  
   >		ServerName exploraction
+  
   >		DocumentRoot C:\wamp64\www\framework\public
+  
   >		CustomLog  C:\wamp64\logs\exploraction_access.log combined
+  
   >		ErrorLog  C:\wamp64\logs\exploraction_error.log
+  
   >	<Directory C:\wamp64\www\framework\public>
+  
   >        	Options Indexes FollowSymLinks
+  
   >       	AllowOverride None
+  
   >        	Require all granted
+  
   >	</Directory>
+  
   ></VirtualHost>
+  
 3. Autorisation de VirtualHost
   * Ajouter la ligne "Include conf/extra/exploraction.conf" dans la section VirtualHost du fichier httpd.conf du dossier C:\wamp64\bin\apache\apache2.X.XX\conf\
   * Vérifier que la ligne "LoadModule vhost_alias_module modules/mod_vhost_alias.so" de ce même fichier soit décommentée.
 4. Modifier les hosts
   * Ajouter à la fin du fichier hosts du dossier C:\Windows\System32\drivers\etc la ligne "127.0.0.1 exploraction"
 5. Redémarrer les services wamp
+
   ![alt text](./doc/img/wamp.png "capture d'écran de la fonction rédemarrer les services de wamp")
 6. Taper dans votre navigateur exploraction/ 
+
   ![alt text](./doc/img/hello.png "capture d'écran du navigateur une fois que tout fonctionne") 
 7. Enjoy
 
@@ -115,16 +128,27 @@ Sauf exception la racine des chemins sera toujours framework.
   * Pour éviter polluer les fichiers de base de apache vous allez créer un nouveau fichier exploraction.conf dans le dossier /etc/apache2/sites-enabled
   * Ecrire le contenu suivant dans le fichier créé :
   ><VirtualHost *:80>
+  
   >		ServerName exploraction
+  
   >		DocumentRoot /var/www/framework/public
+  
   >		CustomLog  /var/log/apache2/exploraction_access.log combined
+  
   >		ErrorLog  /var/log/apache2/exploraction_error.log
+  
   >	<Directory /var/www/framework/public>
+  
   >        	Options Indexes FollowSymLinks
+  
   >       	AllowOverride None
+  
   >        	Require all granted
+  
   >	</Directory>
+  
   ></VirtualHost>
+  
 3. Autorisation de VirtualHost
   * Taper la commande a2ensite exploraction.conf dans votre terminale
   * Vérifier que le module rewrite soit activé avec la commande a2enmod rewrite
