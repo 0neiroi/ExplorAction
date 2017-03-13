@@ -50,7 +50,9 @@ Cette installation n'est utile que pour tester les fonctionnalités du projet. L
   > php -r "if (hash_file('SHA384', 'composer-setup.php') === '669656bab3166a7aff8a7506b8cb2d1c292f042046c5a994c43155c0be6190fa0355160742ab2e1c88d40d5be660b410') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
 
   > php composer-setup.php
-  * puis retaper la commande "php composer.phar install" et taper la commande 
+  
+  * puis retaper la commande "php composer.phar install" et taper la commande
+  
   >php -r "unlink('composer-setup.php');"
   
   )
@@ -60,5 +62,4 @@ Cette installation n'est utile que pour tester les fonctionnalités du projet. L
   * Remplacer les variables "db-" par vos propres variables de connexions
   ![alt text](./doc/img/configPhp.png "capture d'écran du fichier config.php après modification")
   * Toujours depuis le terminal dans le dossier framework taper "make config/config.php"
-  * Enfin taper "$VISUAL config/config.php"
 5. Enjoy ! 
