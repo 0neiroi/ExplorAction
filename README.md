@@ -45,6 +45,7 @@ Cette installation n'est utile que pour tester les fonctionnalités du projet. L
   * Entrer dans le dossier framework "cd framework"
   * Taper la commande "php composer.phar install"
   * (Si erreur copier les lignes suivantes dans le terminale :
+  
   > php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 
   > php -r "if (hash_file('SHA384', 'composer-setup.php') === '669656bab3166a7aff8a7506b8cb2d1c292f042046c5a994c43155c0be6190fa0355160742ab2e1c88d40d5be660b410') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
@@ -84,27 +85,27 @@ Sauf exception la racine des chemins sera toujours framework.
 2. Création d'un VirtualHost
   * Pour éviter polluer les fichiers de base de wamp vous allez créer un nouveau fichier exploraction.conf dans le dossier C:\wamp64\bin\apache\apache2.X.XX\conf\extra
   * Ecrire le contenu suivant dans le fichier créé :
-  ><VirtualHost *:80>
+  >  <VirtualHost *:80>
   
-  >		ServerName exploraction
+  >    ServerName exploraction
   
-  >		DocumentRoot C:\wamp64\www\framework\public
+  >    DocumentRoot C:\wamp64\www\framework\public
   
-  >		CustomLog  C:\wamp64\logs\exploraction_access.log combined
+  >    CustomLog  C:\wamp64\logs\exploraction_access.log combined
   
-  >		ErrorLog  C:\wamp64\logs\exploraction_error.log
+  >    ErrorLog  C:\wamp64\logs\exploraction_error.log
   
-  >	<Directory C:\wamp64\www\framework\public>
+  >    <Directory C:\wamp64\www\framework\public>
   
-  >        	Options Indexes FollowSymLinks
+  >      Options Indexes FollowSymLinks
   
-  >       	AllowOverride None
+  >      AllowOverride None
   
-  >        	Require all granted
+  >      Require all granted
   
-  >	</Directory>
+  >      </Directory>
   
-  ></VirtualHost>
+  >  </VirtualHost>
   
 3. Autorisation de VirtualHost
   * Ajouter la ligne "Include conf/extra/exploraction.conf" dans la section VirtualHost du fichier httpd.conf du dossier C:\wamp64\bin\apache\apache2.X.XX\conf\
@@ -127,27 +128,27 @@ Sauf exception la racine des chemins sera toujours framework.
 2. Création d'un VirtualHost
   * Pour éviter polluer les fichiers de base de apache vous allez créer un nouveau fichier exploraction.conf dans le dossier /etc/apache2/sites-enabled
   * Ecrire le contenu suivant dans le fichier créé :
-  ><VirtualHost *:80>
+  >  <VirtualHost *:80>
   
-  >		ServerName exploraction
+  >    ServerName exploraction
   
-  >		DocumentRoot /var/www/framework/public
+  >    DocumentRoot /var/www/framework/public
   
-  >		CustomLog  /var/log/apache2/exploraction_access.log combined
+  >    CustomLog  /var/log/apache2/exploraction_access.log combined
   
-  >		ErrorLog  /var/log/apache2/exploraction_error.log
+  >    ErrorLog  /var/log/apache2/exploraction_error.log
   
-  >	<Directory /var/www/framework/public>
+  >    <Directory /var/www/framework/public>
   
-  >        	Options Indexes FollowSymLinks
+  >      Options Indexes FollowSymLinks
   
-  >       	AllowOverride None
+  >      AllowOverride None
   
-  >        	Require all granted
+  >      Require all granted
   
-  >	</Directory>
+  >    </Directory>
   
-  ></VirtualHost>
+  >  </VirtualHost>
   
 3. Autorisation de VirtualHost
   * Taper la commande a2ensite exploraction.conf dans votre terminale
