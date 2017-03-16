@@ -118,7 +118,7 @@ Sauf exception la racine des chemins sera toujours framework.
   * Ecrire 'echo "Hello World !";' dans la section DO SOMETHING HERE du fichier index.php se trouvant dans /framework/public
     * (Vous pouvez le tester dans votre navigateur avec l'adresse localhost/framework/public ... bien sûr ça ne fonctionnera pas ce serait trop simple.)
 2. Création d'un VirtualHost
-  * Pour éviter polluer les fichiers de base de apache vous allez créer un nouveau fichier exploraction.conf dans le dossier /etc/apache2/sites-enabled
+  * Pour éviter polluer les fichiers de base de apache vous allez créer un nouveau fichier exploraction.conf dans le dossier /etc/apache2/sites-availabled
   * Ecrire le contenu suivant dans le fichier créé :
   ```
   <VirtualHost *:80>
