@@ -93,7 +93,7 @@ Sauf exception la racine des chemins sera toujours framework.
         ErrorLog  C:\wamp64\logs\exploraction_error.log
 		<Directory C:\wamp64\www\framework\public>
           Options Indexes FollowSymLinks
-          AllowOverride None
+          AllowOverride All
           Require all granted
         </Directory>
     </VirtualHost>
@@ -128,7 +128,7 @@ Sauf exception la racine des chemins sera toujours framework.
     ErrorLog  /var/log/apache2/exploraction_error.log
     <Directory /var/www/framework/public>
       Options Indexes FollowSymLinks
-      AllowOverride None
+      AllowOverride All
       Require all granted
     </Directory>
   </VirtualHost>
