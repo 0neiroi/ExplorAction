@@ -1,18 +1,32 @@
 <html>
 <head>
 	<meta charset="utf-8" /> 
+	<meta name="keywords" content="orientation, éducation, métier, avenir, exploraction" />
 	<script type="text/javascript" src="scripts/jq.js"></script>
 	<link rel="Stylesheet" type="text/css" href="styles/xo.css" />
 
-	<script type="text/javascript" src="js/autocompletion.js"></script>
-
-	<script type="text/javascript" src="scripts/jquery-1.3.2.min.js"></script>
+	<!--<script type="text/javascript" src="scripts/jquery-1.3.2.min.js"></script>-->
 	<script type="text/javascript" src="scripts/jquery.backgroundPosition.js" ></script>
 
 	<script type="text/javascript" src="scripts/parallax/parallax.min.js"></script>
 	<script type="text/javascript" src="scripts/parallax/index.js"></script>
 	<script type="text/javascript" src="scripts/parallax/examples.js"></script>
+
+	<script type="text/javascript" src="scripts/script.js"></script>
 	<link rel="Stylesheet" type="text/css" href="styles/index.css" />
+	<link rel="stylesheet" type="text/css" href="styles/presentation.css" />
+
+	<script src="js/modernizr.custom.js"></script>
+
+
+	<!-- Autocomplete search -->
+	<!-- ATTENTION IL FAUT CHANGER L'IMPORT DE JQUERY PLUS HAUT QUI NE FONCTIONNE PAS-->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  	<link rel="stylesheet" href="/resources/demos/style.css">
+  	<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+  	<script type="text/javascript" src="scripts/autocompletion.js"></script>
+
 
 	<script type="text/javascript">
 
@@ -35,70 +49,20 @@
 
 	<div class="container">
 
-				
 
 		<div id="index" class="leaguegothic white page">
 			<div id="titlebox" class="f2 lghtgrey">
 				<div class="f5 white">Exploraction</div>
-				Votre futur vous attend dès à présent ! Exploraction : un vent de fraicheur dans l'orientation. N'attendez plus, inscrivez-vous maintenant.
+				<span>Votre futur vous attend dès à présent ! Exploraction : un vent de fraicheur dans l'orientation. N'attendez plus, inscrivez-vous maintenant.</span>
 
 			</div>
 		</div>
 
+		<?php include 'pages/recherche.php'; ?>
 
-		<div id="recherche" class="leaguegothic white page f2">
+		<?php include 'pages/presentation.php'; ?>
 
-			<div class="w960 center" style="margin-top:50px;">
-
-			<div class="right"><img src="img/parallax/Classy Skaught.jpg" style="width:200px;"><br><span class="calibri f0">Me enjoying some fine chocolate milk.</span></div>
-
-			<h1>Recherche</h1>
-
-			I like to hit the keyboard and make nifty things.<br>
-			I do hope you fine chaps enjoy Parallax.js as much as I do. <br> <br>
-			If you have any questions, compliments, or just built something super cool with it, I'd love to hear about it!<br>
-			Contact: <span style="color:#AE0000">scott.tolksdorf@gmail.com</span>
-			</div>
-		</div>
-
-		<div id="sandbox" class="leaguegothic white page">
-			
-
-			<div class="f0 center w750 pad">
-
-				<div class="f3">Examples</div>
-
-				<div id="fromLast" class="clickable f1">Returns you to the last page you were on</div>
-				<div id="fromCurrent" class="clickable f1">Alert from the current page</div>
-				<div id="fromRight" class="clickable f1">From the right slow</div>
-				<div id="fromTop" class="clickable f1">From the top with linear easing</div>
-				<div id="fromLeft" class="clickable f1">From the left with increased parallax</div>
-				<div id="fromBottom" class="clickable f1">From the bottom with an onload function</div>
-
-				<pre id = "codebox" class="black">Hover to see code.
-Click to see it in action!</pre>
-
-			</div>-->
-
-		</div>
-
-		<div id="boo" class="leaguegothic white page clickable">
-			<div class="center w400 " style="margin-top:20%;">
-				<div class="lh0" style="font-size:300px;">BOO!</div>
-				<div style="font-size:47px">Click anywhere to head back.</div>
-			</div>
-		</div>
-
-		<div id="profil" class="leaguegothic white page">
-
-			<div id="content" class="black whitebg calibri f0 center w750 pad">
-				<h1>What is Parallax.js?</h1>
-				
-
-			</div>
-
-
-		</div>
+		<?php include 'pages/profil.php'; ?>
 
 	</div>
 
