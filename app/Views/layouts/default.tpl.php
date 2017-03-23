@@ -3,19 +3,19 @@
 <head>
 	<meta charset="utf-8" /> 
 	<meta name="keywords" content="orientation, éducation, métier, avenir, exploraction" />
-	<script type="text/javascript" src="scripts/jq.js"></script>
-	<link rel="Stylesheet" type="text/css" href="styles/xo.css" />
+	<script type="text/javascript" src="/assets/javascripts/jq.js"></script>
+	<link rel="Stylesheet" type="text/css" href="/assets/stylesheets/xo.css" />
 
 	<!--<script type="text/javascript" src="scripts/jquery-1.3.2.min.js"></script>-->
-	<script type="text/javascript" src="scripts/jquery.backgroundPosition.js" ></script>
+	<script type="text/javascript" src="/assets/javascripts/jquery.backgroundPosition.js" ></script>
 
-	<script type="text/javascript" src="scripts/parallax/parallax.min.js"></script>
-	<script type="text/javascript" src="scripts/parallax/index.js"></script>
-	<script type="text/javascript" src="scripts/parallax/examples.js"></script>
+	<script type="text/javascript" src="/assets/javascripts/parallax/parallax.min.js"></script>
+	<script type="text/javascript" src="/assets/javascripts/parallax/index.js"></script>
+	<script type="text/javascript" src="/assets/javascripts/parallax/examples.js"></script>
 
-	<script type="text/javascript" src="scripts/script.js"></script>
-	<link rel="Stylesheet" type="text/css" href="styles/index.css" />
-	<link rel="stylesheet" type="text/css" href="styles/presentation.css" />
+	<script type="text/javascript" src="/assets/javascripts/script.js"></script>
+	<link rel="Stylesheet" type="text/css" href="/assets/stylesheets/index.css" />
+	<link rel="stylesheet" type="text/css" href="/assets/stylesheets/presentation.css" />
 
 	<script src="js/modernizr.custom.js"></script>
 
@@ -26,7 +26,7 @@
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   	<link rel="stylesheet" href="/resources/demos/style.css">
   	<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-  	<script type="text/javascript" src="scripts/autocompletion.js"></script>
+  	<script type="text/javascript" src="/assets/javascripts/autocompletion.js"></script>
 
 
 	<script type="text/javascript">

@@ -5,7 +5,7 @@ define('DB_NAME', 'exploraction'); // sqlite: used as file path
 define('DB_USER', 'anonymous');
 define('DB_PASSWORD', 'anonymous');
 
-define( 'APP_PATH', realpath('./scripts/framework') . '/app' );
+define( 'APP_PATH', realpath('..') . '/app' );
 define('DISABLE_CSRF_PROTECTION',true);
 
 //AuthSession params

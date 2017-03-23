@@ -1,6 +1,6 @@
 <?php
-require_once './scripts/framework/vendor/autoload.php';// Autoload our dependencies with Composer
-require_once './scripts/framework/config/config.php';// config APP
+require_once '../vendor/autoload.php';// Autoload our dependencies with Composer
+require_once '../config/config.php';// config APP
 
 use Pragma\View\View;
 use Pragma\Router\Router;
