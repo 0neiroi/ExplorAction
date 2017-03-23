@@ -7,4 +7,16 @@ $(document).ready(function () {
 		$("#infos_content span:nth-child("+index+")").addClass("infos_active");
 	})
 
+
+	// Clear the search section
+	$("#searchclear").click(function() {
+		$("#metiers").val('');
+	});
+
+
+	// Timeout after the animation
+	setTimeout(function() {
+		parallax[page].bottom();
+	}, 10000);
+
 });

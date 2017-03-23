@@ -14,7 +14,12 @@ $(document).ready( function() {
 
 	$("#metiers").autocomplete({	    
 		source : metiers,
-		appendTo: ".ui-widget"
+		appendTo: "#autocomp",
+		select: function(event, ui) {
+      		$("#metiers").val(ui.item.name);
+			location.href = ui.item.name;
+      		return false;
+      	}
 		/*focus: function( event, ui ) {
         	$("#recherche").val( ui.item.name );
         	return false;

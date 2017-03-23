@@ -18,6 +18,7 @@ $(document).ready(function () {
 
 	parallax.add($("#profil"))
 			.add($("#index"))
+			.add($("#description"))
 			.add($("#sandbox"))
 			.add($("#recherche"));
 
@@ -36,7 +37,12 @@ $(document).ready(function () {
 		setRight("profil", "Profil");
 		setTop("sandbox", "");
 		setLeft("recherche","Recherche");
+		setBottom("description", "Description");
 	};
+
+	/*parallax.description.onload=function(){
+		setTop
+	}*/
 
 	parallax.sandbox.onload=function(){
 		setBottom("index","Accueil");
