@@ -1,17 +1,61 @@
-	
+<div id="content">
+		<nav id="menu" class="nav">
+			<ul>
+				<li id="menu_exploraction">
+					<span class="icon">
+						<i aria-hidden="true" class="icon-home"></i>
+					</span>
+					<span id="">Exploraction</span>
+				</li>
+				<li id="menu_nous">
+					<span class="icon">
+						<i aria-hidden="true" class="icon-team"></i>
+					</span>
+					<span>A propos de nous</span>
+				</li>
+				<li id="menu_contact">
+					<span class="icon">
+						<i aria-hidden="true" class="icon-contact"></i>
+					</span>
+					<span>Contact</span>
+				</li>
+				<li id="menu_legales">
+					<span class="icon">
+						<i aria-hidden="true" class="icon-portfolio"></i>
+					</span>
+					<span>Mentions légales</span>
+				</li>
+			</ul>
+		</nav>
 
-			<div class="f0 center w750 pad">
+		<div id="infos_content">
+			<span id="infos_exploraction" class="infos_active">
+				<p>Exploraction, un vent de fraicheur dans l'orientation !<br/>
+				Exploraction permet aux enfants d'en apprendre plus sur leur futur métier.<br/>
+				A la fois ammusant et facile d'utilisation. C'est une voie d'entrée idéale.</p>
+			</span>
 
-				<div class="f3">Examples</div>
+			<span id="infos_nous">
+				<p>Nous sommes un groupe de 4 étudiants de l'Université de Lorraine.<br/>
+				Nous avons développé cette application web dans le cadre d'un projet scolaire.<br/>
+				Notre but était de rendre l'orientation attrayante dès le plus jeune âge pour que les enfants ne se
+				retrouvent pas dos au mur comme nous l'avons nous mêmes vécu.</p>
+			</span>
 
-				<div id="fromLast" class="clickable f1">Returns you to the last page you were on</div>
-				<div id="fromCurrent" class="clickable f1">Alert from the current page</div>
-				<div id="fromRight" class="clickable f1">From the right slow</div>
-				<div id="fromTop" class="clickable f1">From the top with linear easing</div>
-				<div id="fromLeft" class="clickable f1">From the left with increased parallax</div>
-				<div id="fromBottom" class="clickable f1">From the bottom with an onload function</div>
+			<span id="infos_contact">
+				<p>Une question ? Une remmarque ?<br/>
+				Envie de faire partie de l'équipe ou de proposer une amélioration ?<br/>
+				Contactez-nous : contact@exploraction.com</p>
+			</span>
 
-				<pre id = "codebox" class="black">Hover to see code.
-Click to see it in action!</pre>
+			<span id="infos_legales">
+				<p>Conditions d'utilisations.<br/>
+				Blou bla bli blo.<br/>
+				Fjlkdcjsqklh jlshqf lhjscl qjcsq jdsqhfqsio f ohsdfih qsdhq pvpqdhf.<br/>
+				sdhfjl hsqc  uqhsc lqslclqs ckqshc qshc qsoch qso cqso choqs cqsoc no<br/>
+				jkdsbkjsdnvlqsmvjnqdmslnvlqdkjbnmqn sjdvmsjd sqjndv mndqv eqhô qoshnvmiz.<br/>
+				Oui, la loi est très claire à ce sujet.</p>
+			</span>
+		</div>
 
-			</div>-->
+	</div>
