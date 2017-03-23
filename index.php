@@ -1,6 +1,6 @@
 <?php
-require_once '../vendor/autoload.php';// Autoload our dependencies with Composer
-require_once '../config/config.php';// config APP
+require_once './scripts/framework/vendor/autoload.php';// Autoload our dependencies with Composer
+require_once './scripts/framework/config/config.php';// config APP
 
 use Pragma\View\View;
 use Pragma\Router\Router;
@@ -10,14 +10,29 @@ use Pragma\Router\Router;
  $view = View::getInstance();
  $view->set_tpl_path(APP_PATH . '/Views/');
  $view->setLayout('layouts/default.tpl.php');
+/*
+ $viewA = View::getInstance();
+ $viewA->set_tpl_path(APP_PATH . '/Views/');
+ $viewA->setLayout('pages/accueil.tpl.php');
 
+ $viewR = View::getInstance();
+ $viewR->set_tpl_path(APP_PATH . '/Views/');
+ $viewR->setLayout('pages/recherche.tpl.php');
+
+ $viewT = View::getInstance();
+ $viewT->set_tpl_path(APP_PATH . '/Views/');
+ $viewT->setLayout('pages/tool.tpl.php');
+
+ $viewP = View::getInstance();
+ $viewP->set_tpl_path(APP_PATH . '/Views/');
+ $viewP->setLayout('pages/profil.tpl.php');
+*/
 $app = Router::getInstance();
 
 //define your routes here
 $app->get('/', function(){//HOME PAGE
-	//DO SOMETHING HERE
-	echo "hello world !";
-});
+	(new App\Controllers\PagesController())->index();
+})->alias('pages-index');
 
 $app->group('/metiers',function() use ($app){
 	$app->get('',function(){
@@ -38,6 +53,7 @@ $app->group('/metiers',function() use ($app){
 
 
 });
+
 
 try{
 	$app->run();
