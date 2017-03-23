@@ -2,11 +2,11 @@
 *{outline: 0;padding: 0;margin: 0;border: 0;}
 body,p,ul,ol,dl,textarea,input {font-family: 'LeagueGothic'; font-size:25px;}
 
-/* ----- FONTS ----- */
+/* ----- /assets/fonts ----- */
 @font-face { font-family: 'LeagueGothic';  src:url('../images/parallax/LeagueGothic.otf'); }
-@font-face { font-family: 'Chunk';         src:url('fonts/Chunk.otf'); }
-@font-face { font-family: 'Raleway';       src:url('fonts/Raleway.otf'); }
-@font-face { font-family: 'Sniglet';       src:url('fonts/Sniglet.otf'); }
+@font-face { font-family: 'Chunk';         src:url('../assets/fonts/Chunk.otf'); }
+@font-face { font-family: 'Raleway';       src:url('../assets/fonts/Raleway.otf'); }
+@font-face { font-family: 'Sniglet';       src:url('../assets/fonts/Sniglet.otf'); }
 
 .leaguegothic{font-family:'LeagueGothic'; }
 .chunk       {font-family:'Chunk'; }

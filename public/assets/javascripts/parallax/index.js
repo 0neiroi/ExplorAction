@@ -146,7 +146,7 @@ $(function(){
     $('#foreground_1').css({backgroundPosition: '0px 0px'});
     $('#background').css({backgroundPosition: '0px 0px'});
 
-    /*$('#midground_1').animate({
+    $('#midground_1').animate({
         backgroundPosition:"(-10000px -2000px)"
     }, 240000, 'linear');
 
@@ -156,7 +156,7 @@ $(function(){
 
     $('#background').animate({
         backgroundPosition:"(-10000px -2000px)"
-    }, 480000, 'linear');*/
+    }, 480000, 'linear');
 
 });
  

@@ -23,21 +23,21 @@ body {
 
 /**Background animé **/
 #background {
-    background: url(../img/parallax/background.png) repeat 5% 5%;
+    background: url(../images/parallax/background.png) repeat 5% 5%;
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
     z-index: 100;
 }
 
 #midground_1 {
-    background: url(../img/parallax/midground.png) repeat 20% 20%;
+    background: url(../images/parallax/midground.png) repeat 20% 20%;
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
     z-index: 200;
 }
 
 #foreground_1 {
-    background: url(../img/parallax/foreground.png) repeat 90% 110%;
+    background: url(../images/parallax/foreground.png) repeat 90% 110%;
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
     z-index: 300;
