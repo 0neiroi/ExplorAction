@@ -2,6 +2,7 @@
 <a href="<?= Pragma\Router\Router::url_for('metiers-new');?>">Ajouter un metier</a>
 <div>
 	<?php
+	$metiers = $this->get('metiers');
 	foreach($metiers as $id => $m){
 		?>
 		<div>

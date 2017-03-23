@@ -25,13 +25,6 @@ $metiers = $this->get('metiers');
 			<?php $this->partial($this->getTemplatePath('pages/tool.tpl.php'));?>
 		</div>
 
-		<div id="boo" class="leaguegothic white page clickable">
-			<div class="center w400 " style="margin-top:20%;">
-				<div class="lh0" style="font-size:300px;">BOO!</div>
-				<div style="font-size:47px">Click anywhere to head back.</div>
-			</div>
-		</div>
-
 		<div id="profil" class="leaguegothic white page">
 			<?php $this->partial($this->getTemplatePath('metiers/edit.tpl.php'));?>
 		</div>
