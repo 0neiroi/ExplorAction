@@ -18,7 +18,7 @@ $(document).ready(function () {
 
 	parallax.add($("#profil"))
 			.add($("#index"))
-			.add($("#boo"))
+			.add($("#description"))
 			.add($("#sandbox"))
 			.add($("#recherche"));
 
@@ -37,7 +37,12 @@ $(document).ready(function () {
 		setRight("profil", "Profil");
 		setTop("sandbox", "");
 		setLeft("recherche","Recherche");
+		setBottom("description", "Description");
 	};
+
+	/*parallax.description.onload=function(){
+		setTop
+	}*/
 
 	parallax.sandbox.onload=function(){
 		setBottom("index","Accueil");
@@ -137,23 +142,23 @@ $(document).ready(function () {
 
 $(function(){
 
-    	  $('#midground_1').css({backgroundPosition: '0px 0px'});
-     	 $('#foreground_1').css({backgroundPosition: '0px 0px'});
-      $('#background').css({backgroundPosition: '0px 0px'});
+    $('#midground_1').css({backgroundPosition: '0px 0px'});
+    $('#foreground_1').css({backgroundPosition: '0px 0px'});
+    $('#background').css({backgroundPosition: '0px 0px'});
 
-        $('#midground_1').animate({
-            backgroundPosition:"(-10000px -2000px)"
-        }, 240000, 'linear');
+    /*$('#midground_1').animate({
+        backgroundPosition:"(-10000px -2000px)"
+    }, 240000, 'linear');
 
-        $('#foreground_1').animate({
-            backgroundPosition:"(-10000px -2000px)"
-        }, 120000, 'linear');
+    $('#foreground_1').animate({
+        backgroundPosition:"(-10000px -2000px)"
+    }, 120000, 'linear');
 
-        $('#background').animate({
-            backgroundPosition:"(-10000px -2000px)"
-        }, 480000, 'linear');
+    $('#background').animate({
+        backgroundPosition:"(-10000px -2000px)"
+    }, 480000, 'linear');*/
 
-    });
+});
  
 
 	 
