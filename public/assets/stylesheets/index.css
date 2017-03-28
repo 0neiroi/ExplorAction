@@ -273,4 +273,18 @@ body .ui-autocomplete .ui-menu-item .ui-state-focus {
 	top: 60px;
 	right: 100px;
 	background-color: transparent;
+
+}
+
+
+/****** PARTIE 1JOUR1METIER ******/
+
+#description {
+	padding: 10%;
+	color: #fff;
+}
+
+.wrapper {
+	padding-top: 10%;
+
 }

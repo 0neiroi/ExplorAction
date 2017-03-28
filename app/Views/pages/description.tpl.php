@@ -1,13 +1,18 @@
-<div id="description" class="wrapper">
-	<p>Description du métier : dnsqjkfqlskmlqkfmlqskfmlqskfmlqsfm
-		sjdflksd,lùkq,vkldq,fkl,kl jlksdjflkmqs djsdqmkjsdkmvljq
-		slkdvlksdqv,lksq sdjqnv jsdivdsj ohuisdp hvhsdnqmv sdhnpsdqi
-		qdfhvdqvnqôivq oq^jisfdv  hdsvi ezyfbz ec uecb sjqhdfsuifch 
-		sdhfiosdhciezojczeoi zefiupzec ezhc zehdzuich zzeuchnzepzepci
-	Description du métier : dnsqjkfqlskmlqkfmlqskfmlqskfmlqsfm
-		sjdflksd,lùkq,vkldq,fkl,kl jlksdjflkmqs djsdqmkjsdkmvljq
-		slkdvlksdqv,lksq sdjqnv jsdivdsj ohuisdp hvhsdnqmv sdhnpsdqi
-		qdfhvdqvnqôivq oq^jisfdv  hdsvi ezyfbz ec uecb sjqhdfsuifch 
-		sdhfiosdhciezojczeoi zefiupzec ezhc zehdzuich zzeuchnzepzepci
-	</p>
-</div>
+<p>Nom du métier</p>
+<p>Description du métier</p>
+<p>Catégorie thématique</p>
+<p>Lieux d'exercices</p>
+<p>Niveau de motivation</p>
+<p>Images
+	<img src="" alt="" />
+	<img src="" alt="" />
+	<img src="" alt="" />
+</p>
+<p>Missions</p>
+<p>Compétences</p>
+<p>Avantages</p>
+<p>Inconvénients</p>
+<p>Profil RIASEC</p>
+<p>Longueur de la formation</p>
+<p>Salaire</p>
+<p>Métiers similaires</p>

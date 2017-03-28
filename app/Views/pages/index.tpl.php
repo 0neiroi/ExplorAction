@@ -11,6 +11,9 @@
 			<?php $this->partial($this->getTemplatePath('pages/accueil.tpl.php'));?>
 		</div>
 
+		<div id="description" class="wrapper">
+			<?php $this->partial($this->getTemplatePath('pages/description.tpl.php'));?>
+		</div>
 
 		<div id="recherche" class="leaguegothic white page f2">
 			<?php $this->partial($this->getTemplatePath('pages/recherche.tpl.php'));?>

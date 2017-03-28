@@ -18,6 +18,8 @@
 	<link rel="Stylesheet" type="text/css" href="/assets/stylesheets/index.css" />
 	<link rel="stylesheet" type="text/css" href="/assets/stylesheets/presentation.css" />
 
+	<link rel="stylesheet" type="text/css" href="/assets/stylesheets/animation.css" />
+
 	<script src="js/modernizr.custom.js"></script>
 
 

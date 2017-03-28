@@ -24,6 +24,10 @@ $(document).ready(function () {
 
 	// parallax.background = $("body");
 
+	//Auto-transition after few seconds
+	setTimeout(function() {
+		parallax["description"].bottom();
+	}, 5000);
 
 	//Clears each page navigation on load
 	parallax.preload = function(){
@@ -40,9 +44,10 @@ $(document).ready(function () {
 		setBottom("description", "Description");
 	};
 
-	/*parallax.description.onload=function(){
-		setTop
-	}*/
+
+	parallax.description.onload=function(){
+		setTop("index", "Accueil");
+	}
 
 	parallax.sandbox.onload=function(){
 		setBottom("index","Accueil");
