@@ -1,4 +1,8 @@
-<p>Nom du métier</p>
+<?php
+$metier=$this->get('metier');
+?>
+
+<p>Nom du métier</p> <?= $metier->job_title; ?>
 <p>Description du métier</p>
 <p>Catégorie thématique</p>
 <p>Lieux d'exercices</p>

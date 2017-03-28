@@ -30,9 +30,16 @@ use Pragma\Router\Router;
 $app = Router::getInstance();
 
 //define your routes here
-$app->get('/', function(){//HOME PAGE
-	(new App\Controllers\PagesController())->index();
-})->alias('pages-index');
+
+$app->group('/', function() use ($app){
+	$app->get('', function(){//HOME PAGE
+		(new App\Controllers\PagesController())->index();
+	})->alias('pages-index');
+	$app->get(':id',function($id){
+		(new App\Controllers\PagesController())->index2($id);
+	})->alias('page-index');
+});
+
 
 $app->group('/metiers',function() use ($app){
 	$app->get('',function(){
