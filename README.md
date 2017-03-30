@@ -45,7 +45,7 @@ Allez sur votre naviguateur internet préféré et tapez exploraction/ dans la b
 
 **Wooh !**
 
-![It works !](http://gifb.in/QrRV "It works!")
+![It works !](http://www.gifbin.com/bin/022016/shade-flamewater-fire-trick.gif "It works!")
 
 ### Et les modifications alors ? <a name=12></a>
 
