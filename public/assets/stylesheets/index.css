@@ -64,6 +64,19 @@ body {
 	top:0px;
 }
 
+#index{
+	background : url(../img/hint_profil.svg);
+	background-repeat: no-repeat;
+	background-position: 100% 80%;
+	background-size: auto 102%;
+}
+
+#profil{
+	background : url(img/fond_profil.svg);
+	background-repeat:  no-repeat;
+	background-position:  left;
+}
+
 /*#content{
 	height:100%;
 	overflow-y: scroll;
