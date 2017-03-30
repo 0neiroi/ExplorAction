@@ -60,10 +60,8 @@ Cette installation n'est utile que pour tester les fonctionnalités du projet. L
   * Remplacer les variables "db-" par vos propres variables de connexions
   ![alt text](./doc/img/configPhp.png "capture d'écran du fichier config.php après modification")
   * Toujours depuis le terminal dans le dossier framework taper "make config/config.php"
-<<<<<<< HEAD
   * Enfin taper "$VISUAL config/config.php"
-5. Enjoy ! 
-=======
+
 5. Enjoy ! 
 
 #### Utilisation 
