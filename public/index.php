@@ -42,7 +42,7 @@ $app->group('/', function() use ($app){
 
 
 $app->group('/metiers',function() use ($app){
-	$app->get('',function(){
+	$app->get('/',function(){
 		(new App\Controllers\MetiersController())->index();
 	})->alias('metiers-index');
 	$app->get('/new',function(){
@@ -57,9 +57,15 @@ $app->group('/metiers',function() use ($app){
 	$app->put('/:id',function($id){
 		(new App\Controllers\MetiersController())->update($id);
 	})->alias('metiers-update');
+});
 
+$app->group('/liste',function() use ($app){
+	$app->get('/',function(){
+		(new App\Controllers\BddController())->index();
+	})->alias('listes-index');
 
 });
+
 
 
 try{

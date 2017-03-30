@@ -4,20 +4,20 @@
 
 $(document).ready( function() {
 	var metiers = [
-	    "Laborantin",
+		"Laborantin",
 	    "Ingénieur du son",
 	    "Menuisier",
 	    "Maitre-chien",
 	    "Agriculteur",
 	    "Scheme"
-	];
+		];
 
 	$("#metiers").autocomplete({	    
 		source : metiers,
 		appendTo: "#autocomp",
 		select: function(event, ui) {
       		$("#metiers").val(ui.item.name);
-			location.href = ui.item.name;
+			location.href ='1';
       		return false;
       	}
 		/*focus: function( event, ui ) {
