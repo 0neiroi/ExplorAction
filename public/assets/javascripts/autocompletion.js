@@ -16,8 +16,9 @@ $(document).ready( function() {
 		source : "/metiers/autocomplete",
 		appendTo: "#autocomp",
 		select: function(event, ui) {
-      		//$("#metiers").val("coucou");
-			location.href =ui.term.value;
+      		//$("#metiers").val(ui.term.label);
+			location.href= ui.item.value;
+			
       		return false;
       	}
 		/*focus: function( event, ui ) {
