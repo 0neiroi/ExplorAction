@@ -15,8 +15,8 @@ $(document).ready(function () {
 
 
 	// Timeout after the animation
-	setTimeout(function() {
-		parallax[page].bottom();
-	}, 10000);
+	//setTimeout(function() {
+	//	parallax[page].bottom();
+	//}, 10000);
 
 });

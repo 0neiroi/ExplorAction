@@ -13,11 +13,11 @@ $(document).ready( function() {
 		];
 
 	$("#metiers").autocomplete({	    
-		source : metiers,
+		source : "/metiers/autocomplete",
 		appendTo: "#autocomp",
 		select: function(event, ui) {
-      		$("#metiers").val(ui.item.name);
-			location.href ='1';
+      		//$("#metiers").val("coucou");
+			location.href =ui.term.value;
       		return false;
       	}
 		/*focus: function( event, ui ) {

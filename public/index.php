@@ -57,12 +57,9 @@ $app->group('/metiers',function() use ($app){
 	$app->put('/:id',function($id){
 		(new App\Controllers\MetiersController())->update($id);
 	})->alias('metiers-update');
-});
-
-$app->group('/liste',function() use ($app){
-	$app->get('/',function(){
-		(new App\Controllers\BddController())->index();
-	})->alias('listes-index');
+	$app->get('/autocomplete', function(){
+		(new App\Controllers\MetiersController())->autocomplete();
+	});
 
 });
 

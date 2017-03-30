@@ -47,4 +47,27 @@ class MetiersController extends BaseController{
 		Router::redirect(Router::url_for('metiers-index'));
 	}
 
+	public function autocomplete(){
+		ob_clean();
+		$results = [];
+		$term = isset($this->params["term"]) ? $this->params["term"] : null;
+		if( ! empty($term) ){
+			$metiers = Metier::forge()
+							 ->select(["id", "job_title"])
+							 ->where("job_title", "LIKE", "%".$term."%")
+							 ->get_arrays();
+			
+			if( ! empty($metiers) ){
+				foreach($metiers as $m){
+					$results[] = ["label" => $m["job_title"], "value" => $m["id"]];
+				}
+			}
+		}
+
+		echo json_encode($results);
+		die();
+	}
+
+
+
 }
