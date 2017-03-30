@@ -13,7 +13,10 @@
 	<script type="text/javascript" src="/assets/javascripts/parallax/parallax.min.js"></script>
 	<script type="text/javascript" src="/assets/javascripts/parallax/index.js"></script>
 	<script type="text/javascript" src="/assets/javascripts/parallax/examples.js"></script>
-
+	<!--Pure CSS-->
+	<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!---->
 	<script type="text/javascript" src="/assets/javascripts/script.js"></script>
 	<link rel="Stylesheet" type="text/css" href="/assets/stylesheets/index.css" />
 	<link rel="stylesheet" type="text/css" href="/assets/stylesheets/presentation.css" />
