@@ -64,12 +64,12 @@ body {
 	top:0px;
 }
 
-/*#content{
-	height:100%;
+#content{
+	height:600px;
 	overflow-y: scroll;
 	overflow-x: hidden;
 	background-image: url(../img/parallax/brushed_alu.png);	
-}*/
+}
 
 .jscode{
 	background-color:white;
