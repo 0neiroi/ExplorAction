@@ -40,6 +40,8 @@ Sous windows : ```C:\wamp64\www\framework\public``` par ```C:\wamp64\www\ExplorA
 
 Et si vous n'aviez pas fait cette étape ... [Qu'attendez-vous ?](#hello)
 
+N'oubliez pas de mettre à jour la bdd (en plus de l'import du fichier sql) vous devez suivre le [tutorial phinx](#22)
+
 
 Allez sur votre naviguateur internet préféré et tapez exploraction/ dans la bar d'adresse.
 
@@ -231,7 +233,9 @@ Sauf exception la racine des chemins sera toujours framework.
   * Ajouter à la fin du fichier hosts du dossier /etc/hosts la ligne "127.0.0.1 exploraction"
 5. Redémarrer le service apache
 6. Taper dans votre navigateur exploraction/ 	
+
   ![alt text](./doc/img/hello.png "capture d'écran du navigateur une fois que tout fonctionne")
+
 7. Enjoy
 
 ![alt text](https://media.giphy.com/media/yiYJLX05aQ0FO/200.gif "Yes")
@@ -338,7 +342,9 @@ Cet outil développé par Rob Morgan permet d'effectuer des modifications sur la
 
 *À la racine du projet, dans un terminal taper ```php composer.phar update``` 
 *Vérifier l'intégrité du fichier phinx.php à la racine du projet.
-```
+
+```php
+
 <?php
 require 'config/config.php';
 return array(
