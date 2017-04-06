@@ -12,10 +12,7 @@
 namespace Symfony\Component\Console;
 
 use Symfony\Component\Console\Exception\ExceptionInterface;
-<<<<<<< HEAD
-=======
 use Symfony\Component\Console\Formatter\OutputFormatter;
->>>>>>> bdd
 use Symfony\Component\Console\Helper\DebugFormatterHelper;
 use Symfony\Component\Console\Helper\ProcessHelper;
 use Symfony\Component\Console\Helper\QuestionHelper;
@@ -638,19 +635,11 @@ class Application
             if (defined('HHVM_VERSION') && $width > 1 << 31) {
                 $width = 1 << 31;
             }
-<<<<<<< HEAD
-            $formatter = $output->getFormatter();
-=======
->>>>>>> bdd
             $lines = array();
             foreach (preg_split('/\r?\n/', $e->getMessage()) as $line) {
                 foreach ($this->splitStringByWidth($line, $width - 4) as $line) {
                     // pre-format lines to get the right string length
-<<<<<<< HEAD
-                    $lineLength = $this->stringWidth(preg_replace('/\[[^m]*m/', '', $formatter->format($line))) + 4;
-=======
                     $lineLength = $this->stringWidth($line) + 4;
->>>>>>> bdd
                     $lines[] = array($line, $lineLength);
 
                     $len = max($lineLength, $len);
@@ -658,26 +647,15 @@ class Application
             }
 
             $messages = array();
-<<<<<<< HEAD
-            $messages[] = $emptyLine = $formatter->format(sprintf('<error>%s</error>', str_repeat(' ', $len)));
-            $messages[] = $formatter->format(sprintf('<error>%s%s</error>', $title, str_repeat(' ', max(0, $len - $this->stringWidth($title)))));
-            foreach ($lines as $line) {
-                $messages[] = $formatter->format(sprintf('<error>  %s  %s</error>', $line[0], str_repeat(' ', $len - $line[1])));
-=======
             $messages[] = $emptyLine = sprintf('<error>%s</error>', str_repeat(' ', $len));
             $messages[] = sprintf('<error>%s%s</error>', $title, str_repeat(' ', max(0, $len - $this->stringWidth($title))));
             foreach ($lines as $line) {
                 $messages[] = sprintf('<error>  %s  %s</error>', OutputFormatter::escape($line[0]), str_repeat(' ', $len - $line[1]));
->>>>>>> bdd
             }
             $messages[] = $emptyLine;
             $messages[] = '';
 
-<<<<<<< HEAD
-            $output->writeln($messages, OutputInterface::OUTPUT_RAW | OutputInterface::VERBOSITY_QUIET);
-=======
             $output->writeln($messages, OutputInterface::VERBOSITY_QUIET);
->>>>>>> bdd
 
             if (OutputInterface::VERBOSITY_VERBOSE <= $output->getVerbosity()) {
                 $output->writeln('<comment>Exception trace:</comment>', OutputInterface::VERBOSITY_QUIET);
@@ -861,13 +839,6 @@ class Application
             // ignore invalid options/arguments for now, to allow the event listeners to customize the InputDefinition
         }
 
-<<<<<<< HEAD
-        // don't bind the input again as it would override any input argument/option set from the command event in
-        // addition to being useless
-        $command->setInputBound(true);
-
-=======
->>>>>>> bdd
         $event = new ConsoleCommandEvent($command, $input, $output);
         $this->dispatcher->dispatch(ConsoleEvents::COMMAND, $event);
 

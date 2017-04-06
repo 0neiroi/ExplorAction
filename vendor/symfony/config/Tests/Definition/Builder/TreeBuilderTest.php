@@ -71,11 +71,8 @@ class TreeBuilderTest extends TestCase
         $root = $builder->root('override', 'array', new CustomNodeBuilder());
 
         $root->prototype('bar')->end();
-<<<<<<< HEAD
-=======
 
         $this->assertInstanceOf('Symfony\Component\Config\Tests\Fixtures\BarNode', $root->getNode(true)->getPrototype());
->>>>>>> bdd
     }
 
     public function testAnExtendedNodeBuilderGetsPropagatedToTheChildren()
@@ -84,11 +81,7 @@ class TreeBuilderTest extends TestCase
 
         $builder->root('propagation')
             ->children()
-<<<<<<< HEAD
-                ->setNodeClass('extended', 'Symfony\Component\Config\Tests\Definition\Builder\VariableNodeDefinition')
-=======
                 ->setNodeClass('extended', 'Symfony\Component\Config\Definition\Builder\BooleanNodeDefinition')
->>>>>>> bdd
                 ->node('foo', 'extended')->end()
                 ->arrayNode('child')
                     ->children()
@@ -97,8 +90,6 @@ class TreeBuilderTest extends TestCase
                 ->end()
             ->end()
         ->end();
-<<<<<<< HEAD
-=======
 
         $node = $builder->buildTree();
         $children = $node->getChildren();
@@ -108,7 +99,6 @@ class TreeBuilderTest extends TestCase
         $childChildren = $children['child']->getChildren();
 
         $this->assertInstanceOf('Symfony\Component\Config\Definition\BooleanNode', $childChildren['foo']);
->>>>>>> bdd
     }
 
     public function testDefinitionInfoGetsTransferredToNode()

@@ -586,8 +586,6 @@ class ApplicationTest extends TestCase
         putenv('COLUMNS=120');
     }
 
-<<<<<<< HEAD
-=======
     public function testRenderExceptionEscapesLines()
     {
         $application = new Application();
@@ -603,7 +601,6 @@ class ApplicationTest extends TestCase
         putenv('COLUMNS=120');
     }
 
->>>>>>> bdd
     public function testRun()
     {
         $application = new Application();
@@ -717,17 +714,12 @@ class ApplicationTest extends TestCase
         $input = new ArgvInput(array('cli.php', '-v', 'foo:bar'));
         $application->run($input, $output);
 
-<<<<<<< HEAD
-        $input = new ArgvInput(array('cli.php', '--verbose', 'foo:bar'));
-        $application->run($input, $output);
-=======
         $this->addToAssertionCount(1);
 
         $input = new ArgvInput(array('cli.php', '--verbose', 'foo:bar'));
         $application->run($input, $output);
 
         $this->addToAssertionCount(1);
->>>>>>> bdd
     }
 
     public function testRunReturnsIntegerExitCode()
@@ -1129,34 +1121,6 @@ class ApplicationTest extends TestCase
         $this->assertEquals('some test value', $extraValue);
     }
 
-<<<<<<< HEAD
-    public function testUpdateInputFromConsoleCommandEvent()
-    {
-        $dispatcher = $this->getDispatcher();
-        $dispatcher->addListener('console.command', function (ConsoleCommandEvent $event) {
-            $event->getInput()->setOption('extra', 'overriden');
-        });
-
-        $application = new Application();
-        $application->setDispatcher($dispatcher);
-        $application->setAutoExit(false);
-
-        $application
-            ->register('foo')
-            ->addOption('extra', null, InputOption::VALUE_REQUIRED)
-            ->setCode(function (InputInterface $input, OutputInterface $output) {
-                $output->write('foo.');
-            })
-        ;
-
-        $tester = new ApplicationTester($application);
-        $tester->run(array('command' => 'foo', '--extra' => 'original'));
-
-        $this->assertEquals('overriden', $tester->getInput()->getOption('extra'));
-    }
-
-=======
->>>>>>> bdd
     /**
      * @group legacy
      */

@@ -1,9 +1,6 @@
 	<div class="ui-widget">
-<<<<<<< HEAD
+
 		<img src="/assets/images/tuyaux.png" alt="tuyaux"/>
-=======
-		<img src="img/tuyaux.png" alt="tuyaux"/>
->>>>>>> bdd
   		<input id="metiers" placeholder="Rechercher un métier">
   		<span id="searchclear">x</span>
 	</div>

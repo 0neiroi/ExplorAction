@@ -1,15 +1,4 @@
 
-<<<<<<< HEAD
-                           
-  [Exception]              
-  Third exception comment  
-                           
-
-                            
-  [Exception]               
-  Second exception comment  
-                            
-=======
                                               
   [Exception]                                 
   Third exception <fg=blue;bg=red>comment</>  
@@ -19,7 +8,6 @@
   [Exception]                                  
   Second exception <comment>comment</comment>  
                                                
->>>>>>> bdd
 
                                        
   [Exception]                          

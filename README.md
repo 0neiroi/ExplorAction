@@ -336,6 +336,36 @@ Avant d'utiliser cette exemple n'oubliez pas d'importer le fichier sql fourni da
 
 Cet outil développé par Rob Morgan permet d'effectuer des modifications sur la structure de la base de données. En attendant, un tutoriel et des outils adaptés à notre sites, je vous renvois vers la documentation officielle : [doc phinx](https://doc.phinx.org/ "doc officiel de phinx")
 
+*À la racine du projet, dans un terminal taper ```php composer.phar update``` 
+*Vérifier l'intégrité du fichier phinx.php à la racine du projet.
+```
+<?php
+require 'config/config.php';
+return array(
+    'paths' => array(
+        'migrations' => '%%PHINX_CONFIG_DIR%%/db/migrations',
+        'seeds' => '%%PHINX_CONFIG_DIR%%/db/seed',
+    ),
+    'environments' => array(
+        'production' => array(
+            'adapter' => 'mysql',
+            'host' => DB_HOST,
+            'name' => DB_NAME,
+            'user' => DB_USER,
+            'pass' => DB_PASSWORD,
+            'charset' => 'utf8',
+            'collatiion' => 'utf8_general_ci',
+        ),
+    ),
+);
+```
+
+*Toujours depuis la racine du projet taper 
+
+```./vendor/bin/phinx init```
+
+```./vendor/bin/phinx migrate```
+
 ### autocomplete.js <a name=23></a>
 
 Ce widget jQuery est utilisé dans notre système de recherche. Il sert à simplifier la recherche de nos utilisateurs dans la base de données. Pour plus d'information sur son utilisation veuillez consulter la documentation suivante : [api jqueryui](http://api.jqueryui.com/autocomplete/ "autocomplete doc officiel ")

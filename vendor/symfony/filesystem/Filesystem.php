@@ -446,8 +446,6 @@ class Filesystem
         $startPathArr = explode('/', trim($startPath, '/'));
         $endPathArr = explode('/', trim($endPath, '/'));
 
-<<<<<<< HEAD
-=======
         if ('/' !== $startPath[0]) {
             array_shift($startPathArr);
         }
@@ -473,7 +471,6 @@ class Filesystem
         $startPathArr = $normalizePathArray($startPathArr);
         $endPathArr = $normalizePathArray($endPathArr);
 
->>>>>>> bdd
         // Find for which directory the common path stops
         $index = 0;
         while (isset($startPathArr[$index]) && isset($endPathArr[$index]) && $startPathArr[$index] === $endPathArr[$index]) {

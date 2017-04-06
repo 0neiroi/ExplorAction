@@ -76,13 +76,7 @@ class CommandTester
         }
 
         $this->output = new StreamOutput(fopen('php://memory', 'w', false));
-<<<<<<< HEAD
-        if (isset($options['decorated'])) {
-            $this->output->setDecorated($options['decorated']);
-        }
-=======
         $this->output->setDecorated(isset($options['decorated']) ? $options['decorated'] : false);
->>>>>>> bdd
         if (isset($options['verbosity'])) {
             $this->output->setVerbosity($options['verbosity']);
         }

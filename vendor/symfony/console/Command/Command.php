@@ -40,10 +40,6 @@ class Command
     private $ignoreValidationErrors = false;
     private $applicationDefinitionMerged = false;
     private $applicationDefinitionMergedWithArgs = false;
-<<<<<<< HEAD
-    private $inputBound = false;
-=======
->>>>>>> bdd
     private $code;
     private $synopsis = array();
     private $usages = array();
@@ -220,21 +216,11 @@ class Command
         $this->mergeApplicationDefinition();
 
         // bind the input against the command specific arguments/options
-<<<<<<< HEAD
-        if (!$this->inputBound) {
-            try {
-                $input->bind($this->definition);
-            } catch (ExceptionInterface $e) {
-                if (!$this->ignoreValidationErrors) {
-                    throw $e;
-                }
-=======
         try {
             $input->bind($this->definition);
         } catch (ExceptionInterface $e) {
             if (!$this->ignoreValidationErrors) {
                 throw $e;
->>>>>>> bdd
             }
         }
 
@@ -664,17 +650,6 @@ class Command
     }
 
     /**
-<<<<<<< HEAD
-     * @internal
-     */
-    public function setInputBound($inputBound)
-    {
-        $this->inputBound = $inputBound;
-    }
-
-    /**
-=======
->>>>>>> bdd
      * Validates a command name.
      *
      * It must be non-empty and parts can optionally be separated by ":".
