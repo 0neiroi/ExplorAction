@@ -210,9 +210,15 @@ class Inline
             case Escaper::requiresDoubleQuoting($value):
                 return Escaper::escapeWithDoubleQuotes($value);
             case Escaper::requiresSingleQuoting($value):
+<<<<<<< HEAD
             case preg_match('{^[0-9]+[_0-9]*$}', $value):
             case preg_match(self::getHexRegex(), $value):
             case preg_match(self::getTimestampRegex(), $value):
+=======
+            case Parser::preg_match('{^[0-9]+[_0-9]*$}', $value):
+            case Parser::preg_match(self::getHexRegex(), $value):
+            case Parser::preg_match(self::getTimestampRegex(), $value):
+>>>>>>> bdd
                 return Escaper::escapeWithSingleQuotes($value);
             default:
                 return $value;
@@ -306,10 +312,17 @@ class Inline
                 $i += strlen($output);
 
                 // remove comments
+<<<<<<< HEAD
                 if (preg_match('/[ \t]+#/', $output, $match, PREG_OFFSET_CAPTURE)) {
                     $output = substr($output, 0, $match[0][1]);
                 }
             } elseif (preg_match('/^(.+?)('.implode('|', $delimiters).')/', substr($scalar, $i), $match)) {
+=======
+                if (Parser::preg_match('/[ \t]+#/', $output, $match, PREG_OFFSET_CAPTURE)) {
+                    $output = substr($output, 0, $match[0][1]);
+                }
+            } elseif (Parser::preg_match('/^(.+?)('.implode('|', $delimiters).')/', substr($scalar, $i), $match)) {
+>>>>>>> bdd
                 $output = $match[1];
                 $i += strlen($output);
             } else {
@@ -345,7 +358,11 @@ class Inline
      */
     private static function parseQuotedScalar($scalar, &$i)
     {
+<<<<<<< HEAD
         if (!preg_match('/'.self::REGEX_QUOTED_STRING.'/Au', substr($scalar, $i), $match)) {
+=======
+        if (!Parser::preg_match('/'.self::REGEX_QUOTED_STRING.'/Au', substr($scalar, $i), $match)) {
+>>>>>>> bdd
             throw new ParseException(sprintf('Malformed inline YAML string: %s.', substr($scalar, $i)));
         }
 
@@ -614,7 +631,11 @@ class Inline
                         return;
                     case 0 === strpos($scalar, '!!float '):
                         return (float) substr($scalar, 8);
+<<<<<<< HEAD
                     case preg_match('{^[+-]?[0-9][0-9_]*$}', $scalar):
+=======
+                    case Parser::preg_match('{^[+-]?[0-9][0-9_]*$}', $scalar):
+>>>>>>> bdd
                         $scalar = str_replace('_', '', (string) $scalar);
                         // omitting the break / return as integers are handled in the next case
                     case ctype_digit($scalar):
@@ -628,7 +649,11 @@ class Inline
 
                         return '0' == $scalar[1] ? octdec($scalar) : (((string) $raw === (string) $cast) ? $cast : $raw);
                     case is_numeric($scalar):
+<<<<<<< HEAD
                     case preg_match(self::getHexRegex(), $scalar):
+=======
+                    case Parser::preg_match(self::getHexRegex(), $scalar):
+>>>>>>> bdd
                         $scalar = str_replace('_', '', $scalar);
 
                         return '0x' === $scalar[0].$scalar[1] ? hexdec($scalar) : (float) $scalar;
@@ -639,14 +664,23 @@ class Inline
                         return log(0);
                     case 0 === strpos($scalar, '!!binary '):
                         return self::evaluateBinaryScalar(substr($scalar, 9));
+<<<<<<< HEAD
                     case preg_match('/^(-|\+)?[0-9][0-9,]*(\.[0-9_]+)?$/', $scalar):
                     case preg_match('/^(-|\+)?[0-9][0-9_]*(\.[0-9_]+)?$/', $scalar):
+=======
+                    case Parser::preg_match('/^(-|\+)?[0-9][0-9,]*(\.[0-9_]+)?$/', $scalar):
+                    case Parser::preg_match('/^(-|\+)?[0-9][0-9_]*(\.[0-9_]+)?$/', $scalar):
+>>>>>>> bdd
                         if (false !== strpos($scalar, ',')) {
                             @trigger_error('Using the comma as a group separator for floats is deprecated since version 3.2 and will be removed in 4.0.', E_USER_DEPRECATED);
                         }
 
                         return (float) str_replace(array(',', '_'), '', $scalar);
+<<<<<<< HEAD
                     case preg_match(self::getTimestampRegex(), $scalar):
+=======
+                    case Parser::preg_match(self::getTimestampRegex(), $scalar):
+>>>>>>> bdd
                         if (Yaml::PARSE_DATETIME & $flags) {
                             // When no timezone is provided in the parsed date, YAML spec says we must assume UTC.
                             return new \DateTime($scalar, new \DateTimeZone('UTC'));
@@ -679,7 +713,11 @@ class Inline
             throw new ParseException(sprintf('The normalized base64 encoded data (data without whitespace characters) length must be a multiple of four (%d bytes given).', strlen($parsedBinaryData)));
         }
 
+<<<<<<< HEAD
         if (!preg_match('#^[A-Z0-9+/]+={0,2}$#i', $parsedBinaryData)) {
+=======
+        if (!Parser::preg_match('#^[A-Z0-9+/]+={0,2}$#i', $parsedBinaryData)) {
+>>>>>>> bdd
             throw new ParseException(sprintf('The base64 encoded data (%s) contains invalid characters.', $parsedBinaryData));
         }
 

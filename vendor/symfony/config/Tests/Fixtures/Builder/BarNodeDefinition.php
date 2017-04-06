@@ -12,10 +12,18 @@
 namespace Symfony\Component\Config\Tests\Definition\Builder;
 
 use Symfony\Component\Config\Definition\Builder\NodeDefinition;
+<<<<<<< HEAD
+=======
+use Symfony\Component\Config\Tests\Fixtures\BarNode;
+>>>>>>> bdd
 
 class BarNodeDefinition extends NodeDefinition
 {
     protected function createNode()
     {
+<<<<<<< HEAD
+=======
+        return new BarNode($this->name);
+>>>>>>> bdd
     }
 }

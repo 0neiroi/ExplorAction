@@ -34,7 +34,11 @@ class TableTest extends TestCase
     }
 
     /**
+<<<<<<< HEAD
      * @dataProvider testRenderProvider
+=======
+     * @dataProvider renderProvider
+>>>>>>> bdd
      */
     public function testRender($headers, $rows, $style, $expected, $decorated = false)
     {
@@ -50,7 +54,11 @@ class TableTest extends TestCase
     }
 
     /**
+<<<<<<< HEAD
      * @dataProvider testRenderProvider
+=======
+     * @dataProvider renderProvider
+>>>>>>> bdd
      */
     public function testRenderAddRows($headers, $rows, $style, $expected, $decorated = false)
     {
@@ -66,7 +74,11 @@ class TableTest extends TestCase
     }
 
     /**
+<<<<<<< HEAD
      * @dataProvider testRenderProvider
+=======
+     * @dataProvider renderProvider
+>>>>>>> bdd
      */
     public function testRenderAddRowsOneByOne($headers, $rows, $style, $expected, $decorated = false)
     {
@@ -83,7 +95,11 @@ class TableTest extends TestCase
         $this->assertEquals($expected, $this->getOutputContent($output));
     }
 
+<<<<<<< HEAD
     public function testRenderProvider()
+=======
+    public function renderProvider()
+>>>>>>> bdd
     {
         $books = array(
             array('99921-58-10-7', 'Divine Comedy', 'Dante Alighieri'),
@@ -515,6 +531,38 @@ TABLE
             ,
                 true,
             ),
+<<<<<<< HEAD
+=======
+            'Row with formatted cells containing a newline' => array(
+                array(),
+                array(
+                    array(
+                        new TableCell('<error>Dont break'."\n".'here</error>', array('colspan' => 2)),
+                    ),
+                    new TableSeparator(),
+                    array(
+                        'foo',
+                         new TableCell('<error>Dont break'."\n".'here</error>', array('rowspan' => 2)),
+                    ),
+                    array(
+                        'bar',
+                    ),
+                ),
+                'default',
+                <<<'TABLE'
++-------+------------+
+[39;49m| [39;49m[37;41mDont break[39;49m[39;49m         |[39;49m
+[39;49m| [39;49m[37;41mhere[39;49m               |
++-------+------------+
+[39;49m| foo   | [39;49m[37;41mDont break[39;49m[39;49m |[39;49m
+[39;49m| bar   | [39;49m[37;41mhere[39;49m       |
++-------+------------+
+
+TABLE
+            ,
+                true,
+            ),
+>>>>>>> bdd
         );
     }
 

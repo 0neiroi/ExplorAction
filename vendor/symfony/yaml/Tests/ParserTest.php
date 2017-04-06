@@ -18,6 +18,10 @@ use Symfony\Component\Yaml\Parser;
 
 class ParserTest extends TestCase
 {
+<<<<<<< HEAD
+=======
+    /** @var Parser */
+>>>>>>> bdd
     protected $parser;
 
     protected function setUp()
@@ -1478,6 +1482,20 @@ EOT;
 
         $this->assertSame(array('foo' => 'bar baz foobar foo', 'bar' => 'baz'), $this->parser->parse($yaml));
     }
+<<<<<<< HEAD
+=======
+
+    public function testCanParseVeryLongValue()
+    {
+        $longStringWithSpaces = str_repeat('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ', 20000);
+        $trickyVal = array('x' => $longStringWithSpaces);
+
+        $yamlString = Yaml::dump($trickyVal);
+        $arrayFromYaml = $this->parser->parse($yamlString);
+
+        $this->assertEquals($trickyVal, $arrayFromYaml);
+    }
+>>>>>>> bdd
 }
 
 class B

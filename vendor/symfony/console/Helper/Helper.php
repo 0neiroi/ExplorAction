@@ -106,6 +106,14 @@ abstract class Helper implements HelperInterface
 
     public static function strlenWithoutDecoration(OutputFormatterInterface $formatter, $string)
     {
+<<<<<<< HEAD
+=======
+        return self::strlen(self::removeDecoration($formatter, $string));
+    }
+
+    public static function removeDecoration(OutputFormatterInterface $formatter, $string)
+    {
+>>>>>>> bdd
         $isDecorated = $formatter->isDecorated();
         $formatter->setDecorated(false);
         // remove <...> formatting
@@ -114,6 +122,10 @@ abstract class Helper implements HelperInterface
         $string = preg_replace("/\033\[[^m]*m/", '', $string);
         $formatter->setDecorated($isDecorated);
 
+<<<<<<< HEAD
         return self::strlen($string);
+=======
+        return $string;
+>>>>>>> bdd
     }
 }

@@ -83,7 +83,11 @@ class ExceptionHandler
     /**
      * Sets the format for links to source files.
      *
+<<<<<<< HEAD
      * @param string|FileLinkFormatter $format The format for links to source files
+=======
+     * @param string|FileLinkFormatter $fileLinkFormat The format for links to source files
+>>>>>>> bdd
      *
      * @return string The previous file link format
      */

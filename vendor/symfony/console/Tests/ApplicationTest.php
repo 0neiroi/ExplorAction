@@ -586,6 +586,24 @@ class ApplicationTest extends TestCase
         putenv('COLUMNS=120');
     }
 
+<<<<<<< HEAD
+=======
+    public function testRenderExceptionEscapesLines()
+    {
+        $application = new Application();
+        $application->setAutoExit(false);
+        putenv('COLUMNS=22');
+        $application->register('foo')->setCode(function () {
+            throw new \Exception('dont break here <info>!</info>');
+        });
+        $tester = new ApplicationTester($application);
+
+        $tester->run(array('command' => 'foo'), array('decorated' => false));
+        $this->assertStringEqualsFile(self::$fixturesPath.'/application_renderexception_escapeslines.txt', $tester->getDisplay(true), '->renderException() escapes lines containing formatting');
+        putenv('COLUMNS=120');
+    }
+
+>>>>>>> bdd
     public function testRun()
     {
         $application = new Application();
@@ -699,8 +717,17 @@ class ApplicationTest extends TestCase
         $input = new ArgvInput(array('cli.php', '-v', 'foo:bar'));
         $application->run($input, $output);
 
+<<<<<<< HEAD
         $input = new ArgvInput(array('cli.php', '--verbose', 'foo:bar'));
         $application->run($input, $output);
+=======
+        $this->addToAssertionCount(1);
+
+        $input = new ArgvInput(array('cli.php', '--verbose', 'foo:bar'));
+        $application->run($input, $output);
+
+        $this->addToAssertionCount(1);
+>>>>>>> bdd
     }
 
     public function testRunReturnsIntegerExitCode()
@@ -1102,6 +1129,7 @@ class ApplicationTest extends TestCase
         $this->assertEquals('some test value', $extraValue);
     }
 
+<<<<<<< HEAD
     public function testUpdateInputFromConsoleCommandEvent()
     {
         $dispatcher = $this->getDispatcher();
@@ -1127,6 +1155,8 @@ class ApplicationTest extends TestCase
         $this->assertEquals('overriden', $tester->getInput()->getOption('extra'));
     }
 
+=======
+>>>>>>> bdd
     /**
      * @group legacy
      */

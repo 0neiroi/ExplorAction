@@ -442,6 +442,7 @@ class FilesystemTest extends FilesystemTestCase
         $this->assertFilePermissions(400, $file);
     }
 
+<<<<<<< HEAD
     public function testChmodWrongMod()
     {
         $this->markAsSkippedIfChmodIsMissing();
@@ -450,6 +451,24 @@ class FilesystemTest extends FilesystemTestCase
         touch($dir);
 
         $this->filesystem->chmod($dir, 'Wrongmode');
+=======
+    public function testChmodWithWrongModLeavesPreviousPermissionsUntouched()
+    {
+        $this->markAsSkippedIfChmodIsMissing();
+
+        if (defined('HHVM_VERSION')) {
+            $this->markTestSkipped('chmod() changes permissions even when passing invalid modes on HHVM');
+        }
+
+        $dir = $this->workspace.DIRECTORY_SEPARATOR.'file';
+        touch($dir);
+
+        $permissions = fileperms($dir);
+
+        $this->filesystem->chmod($dir, 'Wrongmode');
+
+        $this->assertSame($permissions, fileperms($dir));
+>>>>>>> bdd
     }
 
     public function testChmodRecursive()
@@ -536,7 +555,14 @@ class FilesystemTest extends FilesystemTestCase
         $dir = $this->workspace.DIRECTORY_SEPARATOR.'dir';
         mkdir($dir);
 
+<<<<<<< HEAD
         $this->filesystem->chown($dir, $this->getFileOwner($dir));
+=======
+        $owner = $this->getFileOwner($dir);
+        $this->filesystem->chown($dir, $owner);
+
+        $this->assertSame($owner, $this->getFileOwner($dir));
+>>>>>>> bdd
     }
 
     public function testChownRecursive()
@@ -548,7 +574,14 @@ class FilesystemTest extends FilesystemTestCase
         $file = $dir.DIRECTORY_SEPARATOR.'file';
         touch($file);
 
+<<<<<<< HEAD
         $this->filesystem->chown($dir, $this->getFileOwner($dir), true);
+=======
+        $owner = $this->getFileOwner($dir);
+        $this->filesystem->chown($dir, $owner, true);
+
+        $this->assertSame($owner, $this->getFileOwner($file));
+>>>>>>> bdd
     }
 
     public function testChownSymlink()
@@ -562,7 +595,14 @@ class FilesystemTest extends FilesystemTestCase
 
         $this->filesystem->symlink($file, $link);
 
+<<<<<<< HEAD
         $this->filesystem->chown($link, $this->getFileOwner($link));
+=======
+        $owner = $this->getFileOwner($link);
+        $this->filesystem->chown($link, $owner);
+
+        $this->assertSame($owner, $this->getFileOwner($link));
+>>>>>>> bdd
     }
 
     public function testChownLink()
@@ -633,7 +673,14 @@ class FilesystemTest extends FilesystemTestCase
         $dir = $this->workspace.DIRECTORY_SEPARATOR.'dir';
         mkdir($dir);
 
+<<<<<<< HEAD
         $this->filesystem->chgrp($dir, $this->getFileGroup($dir));
+=======
+        $group = $this->getFileGroup($dir);
+        $this->filesystem->chgrp($dir, $group);
+
+        $this->assertSame($group, $this->getFileGroup($dir));
+>>>>>>> bdd
     }
 
     public function testChgrpRecursive()
@@ -645,7 +692,14 @@ class FilesystemTest extends FilesystemTestCase
         $file = $dir.DIRECTORY_SEPARATOR.'file';
         touch($file);
 
+<<<<<<< HEAD
         $this->filesystem->chgrp($dir, $this->getFileGroup($dir), true);
+=======
+        $group = $this->getFileGroup($dir);
+        $this->filesystem->chgrp($dir, $group, true);
+
+        $this->assertSame($group, $this->getFileGroup($file));
+>>>>>>> bdd
     }
 
     public function testChgrpSymlink()
@@ -659,7 +713,14 @@ class FilesystemTest extends FilesystemTestCase
 
         $this->filesystem->symlink($file, $link);
 
+<<<<<<< HEAD
         $this->filesystem->chgrp($link, $this->getFileGroup($link));
+=======
+        $group = $this->getFileGroup($link);
+        $this->filesystem->chgrp($link, $group);
+
+        $this->assertSame($group, $this->getFileGroup($link));
+>>>>>>> bdd
     }
 
     public function testChgrpLink()
@@ -1091,6 +1152,19 @@ class FilesystemTest extends FilesystemTestCase
             array('/a/aab/bb/', '/b/aab', '../../a/aab/bb/'),
             array('/aab/bb', '/aa', '../aab/bb/'),
             array('/aab', '/aa', '../aab/'),
+<<<<<<< HEAD
+=======
+            array('/aa/bb/cc', '/aa/dd/..', 'bb/cc/'),
+            array('/aa/../bb/cc', '/aa/dd/..', '../bb/cc/'),
+            array('/aa/bb/../../cc', '/aa/../dd/..', 'cc/'),
+            array('/../aa/bb/cc', '/aa/dd/..', 'bb/cc/'),
+            array('/../../aa/../bb/cc', '/aa/dd/..', '../bb/cc/'),
+            array('C:/aa/bb/cc', 'C:/aa/dd/..', 'bb/cc/'),
+            array('c:/aa/../bb/cc', 'c:/aa/dd/..', '../bb/cc/'),
+            array('C:/aa/bb/../../cc', 'C:/aa/../dd/..', 'cc/'),
+            array('C:/../aa/bb/cc', 'C:/aa/dd/..', 'bb/cc/'),
+            array('C:/../../aa/../bb/cc', 'C:/aa/dd/..', '../bb/cc/'),
+>>>>>>> bdd
         );
 
         if ('\\' === DIRECTORY_SEPARATOR) {
