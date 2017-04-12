@@ -65,14 +65,14 @@ body {
 }
 
 #index{
-	background : url(../img/hint_profil.svg);
+	background : url(../images/hint_profil.svg);
 	background-repeat: no-repeat;
 	background-position: 100% 80%;
 	background-size: auto 102%;
 }
 
 #profil{
-	background : url(img/fond_profil.svg);
+	background : url(../images/fond_profil.svg);
 	background-repeat:  no-repeat;
 	background-position:  left;
 }
@@ -81,7 +81,7 @@ body {
 	height:600px;
 	overflow-y: scroll;
 	overflow-x: hidden;
-	background-image: url(../img/parallax/brushed_alu.png);	
+	background-image: url(../images/parallax/brushed_alu.png);	
 }
 
 .jscode{
