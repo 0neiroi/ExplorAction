@@ -5,7 +5,9 @@
 	<meta name="keywords" content="orientation, éducation, métier, avenir, exploraction" />
 	<script type="text/javascript" src="/assets/javascripts/jq.js"></script>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	
 	<link rel="Stylesheet" type="text/css" href="/assets/stylesheets/xo.css" />
+
 
 	<link rel="stylesheet" type="text/css" href="/assets/stylesheets/modal.css">
 	<!--<script type="text/javascript" src="scripts/jquery-1.3.2.min.js"></script>-->
@@ -49,6 +51,8 @@
 	  })();
 
 	</script>
+	<link rel="Stylesheet" type="text/css" href="/assets/stylesheets/w3.css" />
+
 </head>
 	<body>
 		<div id="background">
