@@ -29,7 +29,7 @@
 				  </div>
 				  <div class="w3-bar-block">
 					  <a class="w3-bar-item w3-button" href="#oModal">Qui es tu ?</a>
-					  <a class="w3-bar-item w3-button" href="javascript:void(0)">Ma salle de classe</a>
+					  <a class="w3-bar-item w3-button" href="#oModal-2">Ma salle de classe</a>
 					  <a class="w3-bar-item w3-button" href="javascript:void(0)">Mes cartes à jouer</a>
 					  <a class="w3-bar-item w3-button" href="javascript:void(0)">Mes paramètres</a>
 				  </div>
@@ -58,21 +58,34 @@
 			}
 			</script-->
 
-				<div id="oModal" class="oModal">
+				<div id="oModal" class="oModal black">
 				  <div>
 				    <header>
 				      <a href="#fermer" title="Fermer la fenêtre" class="droite">X</a>
-				       <h2>Exemple de fenêtre « modal » stylisée </h2>
+				       <h2>Bienvenue Utilisateur</h2>
 				     </header>
 				     <section>
-				      <p>Description du message. </p>
+				      <p>Suite à l'étude de ton profil, nous pouvons te dire blablablablablablablablablablablabla blablablablablabla blablablablablabla </p>
 				     </section>
 				     <footer class="cf">
 				      <a href="#fermer" class="btn droite" title="Fermer la fenêtre">Fermer</a>
 				     </footer>
 				  </div>
 				</div>
-				 
+		 		<div id="oModal-2" class="oModal black">
+				  <div>
+				    <header>
+				      <a href="#fermer" title="Fermer la fenêtre" class="droite">X</a>
+				       <h2>La Salle de Classe</h2>
+				     </header>
+				     <section>
+				      <p>Voici ta salle de classe, ici tu trouveras tout ce qui est en lien avec les activités proposées en cours </p>
+				     </section>
+				     <footer class="cf">
+				      <a href="#fermer" class="btn droite" title="Fermer la fenêtre">Fermer</a>
+				     </footer>
+				  </div>
+				</div>
 				
 
 
