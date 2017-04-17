@@ -63,6 +63,22 @@ $app->group('/metiers',function() use ($app){
 
 });
 
+$app->group('/users',function() use ($app){
+	$app->get('',function(){
+		(new App\Controllers\UsersController())->index();
+	})->alias('users-index');
+	$app->get('/new',function(){
+		(new App\Controllers\UsersController())->connect();
+	})->alias('users-connect');
+	$app->post('',function(){
+		(new App\Controllers\UsersController())->create();
+	})->alias('users-create');
+	$app->get('/:id',function($id){
+		(new App\Controllers\UsersController())->index2($id);
+	})->alias('user-index');
+
+});
+
 
 
 try{

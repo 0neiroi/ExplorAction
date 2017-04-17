@@ -178,61 +178,6 @@
         ]
     },
     {
-        "name": "pragma-framework/core",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/pragma-framework/core.git",
-            "reference": "df961bef4baac024f36b2fda54f9214a8d00765d"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/pragma-framework/core/zipball/df961bef4baac024f36b2fda54f9214a8d00765d",
-            "reference": "df961bef4baac024f36b2fda54f9214a8d00765d",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.0"
-        },
-        "require-dev": {
-            "phpunit/dbunit": ">=1.2",
-            "phpunit/phpunit": "4.8"
-        },
-        "suggest": {
-            "pragma-framework/auth-session": "Simple user authentication based on PHP Session",
-            "pragma-framework/forms": "Quickly build Forms with CSRF Protection"
-        },
-        "time": "2017-03-29T14:07:34+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "Pragma": "."
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Cyril Rouyer"
-            }
-        ],
-        "description": "The Pragma Core Module for Pragma Framework",
-        "keywords": [
-            "controller",
-            "core",
-            "framework",
-            "model",
-            "orm",
-            "pragma",
-            "router",
-            "view"
-        ]
-    },
-    {
         "name": "symfony/filesystem",
         "version": "v3.2.7",
         "version_normalized": "3.2.7.0",
@@ -521,6 +466,61 @@
         ],
         "description": "Symfony Yaml Component",
         "homepage": "https://symfony.com"
+    },
+    {
+        "name": "pragma-framework/core",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/pragma-framework/core.git",
+            "reference": "df961bef4baac024f36b2fda54f9214a8d00765d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/pragma-framework/core/zipball/df961bef4baac024f36b2fda54f9214a8d00765d",
+            "reference": "df961bef4baac024f36b2fda54f9214a8d00765d",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "require-dev": {
+            "phpunit/dbunit": ">=1.2",
+            "phpunit/phpunit": "4.8"
+        },
+        "suggest": {
+            "pragma-framework/auth-session": "Simple user authentication based on PHP Session",
+            "pragma-framework/forms": "Quickly build Forms with CSRF Protection"
+        },
+        "time": "2017-03-29T14:07:34+00:00",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "Pragma": "."
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Cyril Rouyer"
+            }
+        ],
+        "description": "The Pragma Core Module for Pragma Framework",
+        "keywords": [
+            "controller",
+            "core",
+            "framework",
+            "model",
+            "orm",
+            "pragma",
+            "router",
+            "view"
+        ]
     },
     {
         "name": "pragma-framework/forms",

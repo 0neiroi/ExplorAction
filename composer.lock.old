@@ -57,7 +57,7 @@
                 "router",
                 "view"
             ],
-            "time": "2017-03-29 14:07:34"
+            "time": "2017-03-29T14:07:34+00:00"
         },
         {
             "name": "pragma-framework/forms",
