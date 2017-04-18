@@ -52,5 +52,13 @@ class CreationNouvelleBase extends AbstractMigration
               ->addColumn('idCards', 'string', array('limit' => 20))
               ->addIndex(array('date', 'idCards'), array('unique' => true))
               ->save();
+	$riasec=$this->table('riasec');
+	$riasec->addColumn('id','integer',array('limit'=>20))
+		->addColumn('type','string',array('limit'=>20))
+		->addColumn('description','string',array('limit'=>1000))
+		->addColumn('qualites','string',array('limit'=>1000))
+		->addColumn('faiblesses','string',array('limit'=>1000))
+		->addIndex(array('id'),array('unique'=>true))
+		->save();
     }
 }
