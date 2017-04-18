@@ -384,5 +384,7 @@ Cet outil nous permet une gestion des pages en version "one single interface" : 
 
 Il s'agit d'un framework css qui assura la partie design de notre site : [Pure.css](https://purecss.io "Site de pure css")
 
-###jpgraph <a name=26></a>
+### jpgraph <a name=26></a>
+
+Cet outil nous permet de générer des graphiques en radar dans le RIASEC : [jpgraph](http://jpgraph.net/)
 
