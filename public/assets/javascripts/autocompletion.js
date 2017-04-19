@@ -16,9 +16,14 @@ $(document).ready( function() {
 		source : "/metiers/autocomplete",
 		appendTo: "#autocomp",
 		select: function(event, ui) {
+
       		//$("#metiers").val(ui.term.label);
 			location.href= ui.item.value;
 			
+
+//      		$("#metiers").val(ui.item.name);
+//			location.href = '2';
+
       		return false;
       	}
 		/*focus: function( event, ui ) {

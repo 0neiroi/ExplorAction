@@ -111,6 +111,7 @@ $metier=$this->get('metier');
 	</div>
 </div>
 
+
 <script type="text/javascript">
 	document.getElementById("index2").style.display = "none";
 
@@ -128,3 +129,79 @@ $metier=$this->get('metier');
 	}
 	
 </script>
+
+<!-- Changement de la carte chaque jours -->
+<?php
+
+// compteur de jours
+$compteJour = 0;
+// si la rotation des metiers de la semaine à été faite
+$dejaFait = FALSE;
+$historique = array();
+
+$listeCartes = array(
+	'Laborantin',
+	'Menuisier',
+	'Agriculteur',
+	'Ploicier',
+	'Boulanger',
+	'Medecin',
+	'Fleuriste',
+	'Ingénieur',
+	'Informaticien',
+	'Conducteur d\'engin',
+	'Professeur',
+	'Boxeur',
+	'Peintre',
+	'Ecrivain',
+	'Neurobiologiste',
+	'Horthiculteur',
+	'Designer',
+	'Pharmacien',
+	'Clown',
+	'Cambrioleur'
+);
+
+$cartesSemaine = array();
+
+function rotationSemaine($listeCartes) {
+	global $cartesSemaine;
+	//print_r($listeCartes);
+	$cartesSemaine = array_rand($listeCartes, 5);
+	print_r($listeCartes[$cartesSemaine[0]]);
+	$_SESSION['dejaFait'] = 2;
+	print_r($_SESSION['dejaFait']);
+	return $cartesSemaine;
+}
+
+
+$date = date('Y-m-d'); // récuppération de la date actuelle
+$good_format = strtotime($date); // transformation en numéro de semaine
+echo date('W', $good_format); // affichage du numéro de la semaine
+$_SESSION['numSem'] = date('W', $good_format);
+
+if(strtotime("today 10:35 am Europe/London")) {
+	global $cartesSemaine;
+	echo "BLOUVKFVSLSNSJS";
+	$cartesSemaine = rotationSemaine($listeCartes);
+}
+
+if($_SESSION['dejaFait'] == 1) {
+	global $cartesSemaine;
+	echo "g1";
+	$cartesSemaine = rotationSemaine($listeCartes);
+}
+
+/*
+print_r($cartesSemaine);
+print_r($cartesSemaine[0]);
+print_r($listeCartes[$cartesSemaine[0]]);
+
+$jour = date('j');
+$jourCourrant = $jour;
+
+if(array_key_exists($jour, $cartesSemaine)) {
+	$carteDuJour = $cartesSemaine[$jour];
+}*/
+
+?>
