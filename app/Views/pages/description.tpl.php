@@ -49,8 +49,19 @@ $metier=$this->get('metier');
 
 			<div class="pure-u-1">
 				<!--Description complète-->
-				<p>Missions</p>
+				<p>Missions</p> 
+				<p>  
+					<?php $tasks = split(';',$metier->tasks); 
+						foreach ($tasks as $id => $value) {
+							?>
+							<div>
+								<p> <?= $value ?> </p>
+							</div>	
+					<?php } 
+					?> 
+				</p>
 				<p>Compétences</p>
+					<!--<?= $metier->tasks; ?> -->
 				<p>Avantages</p>
 				<p>Inconvénients</p>
 				<p>Description du métier</p>
