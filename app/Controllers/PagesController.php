@@ -28,4 +28,9 @@ class PagesController extends BaseController{
 		
 	}
 
+	/*public function riasec(){
+		//echo "coucou";
+		$this->view->render('/RIASEC/RIASEC_accueil.php');
+	}*/
+
 }

@@ -38,6 +38,9 @@ $app->group('/', function() use ($app){
 	$app->get(':id',function($id){
 		(new App\Controllers\PagesController())->index2($id);
 	})->alias('page-index');
+	/*$app->get('riasec/',function(){
+		(new App\Controllers\PagesController())->riasec();
+	})->alias('page-riasec');*/
 });
 
 
@@ -78,6 +81,7 @@ $app->group('/users',function() use ($app){
 	})->alias('user-index');
 
 });
+
 
 
 
