@@ -137,11 +137,15 @@
 						require_once('jpgraph/jpgraph_iconplot.php');
  
 						// Some data to plot
-						$data = array(55,80,46,71,95);
+						$data = array($R_score,$I_score,$A_score,$S_score,$E_score,$C_score);
+						$titles=array("R","I","A","S",'E',"C");
  
 						// Create the graph and the plot
-						$graph = new RadarGraph(250,200);
+						$graph = new RadarGraph(640,500);
 						$plot = new RadarPlot($data);
+						$plot->SetFillColor('#b91423');
+						$graph->SetTitles($titles);
+						$graph->SetCenter(0.5,0.55);
  
 						// Add the plot and display the graph
 						$graph->Add($plot);

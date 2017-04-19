@@ -48,6 +48,13 @@ div{
 	float:right; 
 }
 
+#introduction_2 > img{ 
+	border: 1px solid crimson; 
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:20px;
+}
+
 #consigne{
 	background-color: rgba(47, 45, 45, 0.58);
 	color: white; 
