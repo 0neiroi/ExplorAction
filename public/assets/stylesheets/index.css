@@ -295,7 +295,30 @@ body .ui-autocomplete .ui-menu-item .ui-state-focus {
 #description {
 	padding: 10%;
 	color: #fff;
+	overflow: visible;
+	width: 70%;
+	height: 50%;
+	display: inline-block;
+	/*padding: 2em;*/
+	/*border: 1px solid #89867e;*/
+	margin-left: 5%;
+	margin-right: 5%;
 }
+
+#description p{
+	color:white;
+	padding: 2em;
+	font-size: 22px;
+	text-align: justify;
+}
+
+.description {
+	color:white;
+	text-align:justify;
+	font-size: 24px;
+}
+
+
 
 .wrapper {
 	padding-top: 10%;

@@ -1,3 +1,4 @@
+
 <?php
 
 use Phinx\Seed\AbstractSeed;
@@ -14,6 +15,11 @@ class UserSeeder extends AbstractSeed
      * http://docs.phinx.org/en/latest/seeding.html
      */
     public function run(){
-        $u = User::build(['fullname' => 'Charlie Root', 'email' => 'contact@netlor.fr', 'password' => 'baeZ4ohthai2', 'type' => User::TYPE_ADMIN])->save();
-    }
+       /* $u = User::build([
+		'fullname' => 'Charlie Root', 
+		'email' => 'contact@netlor.fr', 
+		'password' => 'baeZ4ohthai2', 
+		'type' => User::TYPE_ADMIN])->save();
+    */
+	}	
 }

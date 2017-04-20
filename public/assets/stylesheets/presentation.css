@@ -129,6 +129,7 @@ a, li {
 	position: absolute;
 	width: 70%;
 	display: none;
+	color:white;
 }
 
 #infos_content p {

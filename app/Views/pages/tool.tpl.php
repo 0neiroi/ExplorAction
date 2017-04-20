@@ -52,9 +52,8 @@
 				<p>Conditions d'utilisations.<br/>
 				Blou bla bli blo.<br/>
 				Fjlkdcjsqklh jlshqf lhjscl qjcsq jdsqhfqsio f ohsdfih qsdhq pvpqdhf.<br/>
-				sdhfjl hsqc  uqhsc lqslclqs ckqshc qshc qsoch qso cqso choqs cqsoc no<br/>
-				jkdsbkjsdnvlqsmvjnqdmslnvlqdkjbnmqn sjdvmsjd sqjndv mndqv eqhô qoshnvmiz.<br/>
-				Oui, la loi est très claire à ce sujet.</p>
+				sdhfjl hsqc  uqhsc lqslclqs ckqshc qshc qsoch qso cqso choqs cqsoc no.
+				</p>
 			</span>
 		</div>
 
