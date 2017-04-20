@@ -338,7 +338,7 @@ Avant d'utiliser cette exemple n'oubliez pas d'importer le fichier sql fourni da
 
 ### Phinx <a name=22></a>
 
-Cet outil développé par Rob Morgan permet d'effectuer des modifications sur la structure de la base de données. En attendant, un tutoriel et des outils adaptés à notre sites, je vous renvois vers la documentation officielle : [doc phinx](https://doc.phinx.org/ "doc officiel de phinx")
+Cet outil développé par Rob Morgan permet d'effectuer des modifications sur la structure de la base de données. En attendant, un tutoriel et des outils adaptés à notre sites, je vous renvois vers la documentation officielle : [doc phinx](http://docs.phinx.org/en/latest/ "doc officiel de phinx")
 
 *À la racine du projet, dans un terminal taper ```php composer.phar update``` 
 *Vérifier l'intégrité du fichier phinx.php à la racine du projet.

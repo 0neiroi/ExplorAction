@@ -50,7 +50,7 @@ $f2=new Pragma\Forms\Form([
 				  class="w3-bar-item w3-button w3-right w3-padding-16" title="close Sidebar">&times;</button>
 				  </div>
 				  <div class="w3-bar-block">
-					  <a class="w3-bar-item w3-button" href="#oModal">Qui es tu ?</a>
+					  <a class="w3-bar-item w3-button" href="/RIASEC/RIASEC_accueil.php">Qui es tu ?</a>
 					  <a class="w3-bar-item w3-button" href="#oModal-2">Ma salle de classe</a>
 					  <a class="w3-bar-item w3-button" href="javascript:void(0)">Mes cartes à jouer</a>
 					  <a class="w3-bar-item w3-button" href="javascript:void(0)">Mes paramètres</a>
@@ -87,6 +87,8 @@ $f2=new Pragma\Forms\Form([
 				       <h2>Bienvenue Utilisateur</h2>
 				     </header>
 				     <section>
+				     <!--?php include '/RIASEC/RIASEC_accueil.php' ?-->
+
 				      <p>Suite à l'étude de ton profil, nous pouvons te dire blablablablablablablablablablablabla blablablablablabla blablablablablabla </p>
 				     </section>
 				     <footer class="cf">

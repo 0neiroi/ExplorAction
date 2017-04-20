@@ -3,8 +3,9 @@
 	<html>
 		<head>
     			<title>RIASEC</title>
-			<charset="utf-8"/>
+			<meta charset="utf-8"/>
 			<link rel="stylesheet" href="styles/style.css" />
+			<link rel="stylesheet" type="text/css" href="../assets/stylesheets/modal.css">
 		</head>
 
 		<body>
@@ -17,8 +18,10 @@
  			<div id='contener'>
 
 				<header>
+				<a href="http://exploraction/" title="Fermer la fenêtre" class="droite croix">X</a>
 					<h1> Phase 1 : Occup'Action </h1>
             				<img src="img/sat.png" alt="Une image d'en-tête" />
+            				
 
 				</header>
 

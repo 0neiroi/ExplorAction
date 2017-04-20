@@ -13,7 +13,6 @@ $metier=$this->get('metier');
 				<p><?= $metier->description; ?></p>
 			</div>
 			
-
 			<!--image section-->
 
 			<div class="pure-u-1-10"></div>

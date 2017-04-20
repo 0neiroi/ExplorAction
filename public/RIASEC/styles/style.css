@@ -229,6 +229,11 @@ li:last-child{
 a{
 	color:crimson; 
 }
+
+.croix .croix:active{
+	text-decoration: none;
+}
+
 input[type="radio"]{
 	list-style: none;
 }
