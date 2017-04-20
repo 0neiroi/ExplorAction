@@ -45,7 +45,7 @@ $f2=new Pragma\Forms\Form([
 
 			<div class="w3-sidebar w3-light-grey w3-card-4 " style="width:200px" id="mySidebar">
 				  <div class="w3-bar w3-dark-grey">
-				  <span class="w3-bar-item w3-padding-16"><a href="#oModal-SignIn"><img src="/assets/images/Log_In.png" class="img-icon-profil" alt="Sign in"></a><a href="#oModal-SignUp"><img src="/assets/images/Sign_up.png" class="img-icon-profil" alt="Sign up"></a></span>
+				  <span class="w3-bar-item w3-padding-16"><a href="#oModal-SignIn" title="Se connecter"><img src="/assets/images/Log_In.png" class="img-icon-profil" alt="Sign in"></a><a href="#oModal-SignUp" title="S'inscrire"><img src="/assets/images/Sign_up.png" class="img-icon-profil" alt="Sign up"></a></span>
 				  <button onclick="w3_close()"
 				  class="w3-bar-item w3-button w3-right w3-padding-16" title="close Sidebar">&times;</button>
 				  </div>

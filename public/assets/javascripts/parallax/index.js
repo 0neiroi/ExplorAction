@@ -25,9 +25,10 @@ $(document).ready(function () {
 	// parallax.background = $("body");
 
 	//Auto-transition after few seconds
-	setTimeout(function() {
+
+	/*setTimeout(function() {
 		parallax["description"].bottom();
-	}, 5000);
+	}, 5000);*/
 
 	//Clears each page navigation on load
 	parallax.preload = function(){
