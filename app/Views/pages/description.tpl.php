@@ -47,26 +47,66 @@ $metier=$this->get('metier');
 			<div class="pure-u-1-10"></div>
 
 			<div class="pure-u-1">
+				<div id='description'>
 				<!--Description complète-->
-				<p>Missions</p> 
+				<div class='description'>Missions</div> 
 				<p>  
 					<?php $tasks = split(';',$metier->tasks); 
 						foreach ($tasks as $id => $value) {
 							?>
-							<div>
-								<p> <?= $value ?> </p>
-							</div>	
+							<ul>
+								<li> <?= $value ?> </li>
+							</ul>	
 					<?php } 
 					?> 
 				</p>
-				<p>Compétences</p>
+				<div class='description'>Compétences</div> 				
+				<p>
+					<?php $skills = split(';',$metier->skills);
+						foreach ($skills as $id => $value) {?>
+							<ul>
+								<li> <?= $value ?> </li>
+							</ul>
+					<?php }
+					?>		
+				</p>
 					<!--<?= $metier->tasks; ?> -->
-				<p>Avantages</p>
-				<p>Inconvénients</p>
-				<p>Description du métier</p>
-				<p>Catégorie thématique</p>
-				<p>Lieux d'exercices</p>
-				<p>Longueur de la formation</p>
+				<div class='description'>Avantages</div> 
+				<p>
+					<?php $advantages = split(';',$metier->advantages);
+						foreach ($advantages as $id => $value) {?>
+							<ul>
+								<li> <?= $value ?> </li>
+							</ul>
+					<?php }
+					?>		
+				</p>
+				<div class='description'>Inconvénients</div> 
+				<p>
+					<?php $disadvantages = split(';',$metier->disadvantages);
+						foreach ($disadvantages as $id => $value) {?>
+							<ul>
+								<li> <?= $value ?> </li>
+							</ul>
+					<?php }
+					?>		
+				</p>
+				<div class='description'>Catégorie thématique</div>
+					<p> <?= $metier->theme; ?> </p>
+
+				<div class='description'>Lieux d'exercice</div> 
+				<p>
+					<?php $place = split(';',$metier->place);
+						foreach ($place as $id => $value) {?>
+							<ul>
+								<li> <?= $value ?> </li>
+							</ul>
+					<?php }
+					?>		
+				</p>
+				<div class='description'>Niveau de motivation</div> 
+					<p> <?= $metier->motivation_level; ?> </p>
+				</div>
 			</div>
 
 			<div class="pure-u-1-13"></div>
