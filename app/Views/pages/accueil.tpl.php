@@ -11,7 +11,11 @@ $metier=$this->get('metier');
 
     <script>
       // 2. This code loads the IFrame Player API code asynchronously.
-      var tag = document.createElement('script');
+
+      console.log(window.location.pathname)
+      if(window.location.pathname=="/"){
+      	$("p").before("");
+      	 var tag = document.createElement('script');
 
       tag.src = "https://www.youtube.com/iframe_api";
       var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -28,7 +32,7 @@ $metier=$this->get('metier');
           position:'fixed',
           top:0,
           left:0,
-          videoId: 'r2ShaMdKF6E', //<?= $metier->media_link; ?>
+          videoId: 's6YuoEeYZyA', //<?= $metier->media_link; ?>
           events: {
             'onReady':onPlayerReady,
             'onStateChange': onPlayerStateChange
@@ -54,19 +58,22 @@ $metier=$this->get('metier');
           done = true;
         }
         changeLayout();
-
       }
+
       function changeLayout(){
       	console.log(player.getPlayerState());
       	if(player.getPlayerState()==0){
       		changeNow();
       	}
-
       }
       	
       function stopVideo() {
-        player.stopVideo();
+      	player.stopVideo();
       }
+
+
+      }
+     
     </script>
 </div>
 
