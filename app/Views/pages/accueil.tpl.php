@@ -43,9 +43,23 @@ $metier=$this->get('metier');
 
       // 4. The API will call this function when the video player is ready.
       function onPlayerReady(event) {
-      	setTimeout('',5000);
+      	setTimeout(function(){
+
+      		var motsCles = ["Laboratoire","Expérimentation","Analyses","Biochimie"];
+      for(var i =0; i<motsCles.length; i++){
+      	console.log(document.getElementById(motsCles[i]).innerhtml);
+		document.getElementById(motsCles[i]).style.zIndex = -99;	
+	}
+      	document.getElementById("intro").innerhtml = "";
       	document.getElementById("intro").style.display = "none";
         event.target.playVideo();
+
+
+
+      		console.log("OK")},20000);
+      	//setTimeout('',6000);
+
+      
       }
 
       // 5. The API calls this function when the player's state changes.
@@ -73,6 +87,9 @@ $metier=$this->get('metier');
 
 
       }
+
+    	
+
      
     </script>
 </div>

@@ -1,6 +1,0 @@
-/****** Chargement Metiers ****/
-#frame{
-	font-family : 'codropsicons';
-	text-decoration: none;
-	color:white;
-}

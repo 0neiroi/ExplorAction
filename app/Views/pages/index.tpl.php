@@ -8,24 +8,6 @@
 				
 
 		<div id="index" class="leaguegothic white page">
-			<div id="oModal" class="oModal black">
-				  <div>
-				    <header>
-				      <a href="#fermer" title="Fermer la fenêtre" class="droite">X</a>
-				       <h2>Bienvenue Utilisateur</h2>
-				     </header>
-				     <section>
-				     <!--?php include '/RIASEC/RIASEC_accueil.php' ?-->
-						<iframe width="420" height="315"
-							src="https://www.youtube.com/embed/XGSy3_Czz8k?controls=0">
-						</iframe>
-				     </section>
-				     <footer class="cf">
-				      <a href="#fermer" class="btn droite" title="Fermer la fenêtre">Fermer</a>
-				     </footer>
-				  </div>
-				</div>
-
 			<?php $this->partial($this->getTemplatePath('pages/accueil.tpl.php'));?>
 		</div>
 

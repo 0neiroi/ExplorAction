@@ -21,6 +21,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!---->
 	<script type="text/javascript" src="/assets/javascripts/script.js"></script>
+	<script type="text/javascript" src="/assets/javascripts/keywords-animation.js"></script>
+
 	<link rel="Stylesheet" type="text/css" href="/assets/stylesheets/index.css" />
 	<link rel="stylesheet" type="text/css" href="/assets/stylesheets/presentation.css" />
 
