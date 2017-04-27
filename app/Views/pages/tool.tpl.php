@@ -1,7 +1,7 @@
 <div id="content">
 		<nav id="menu" class="nav">
 			<ul>
-				<li id="menu_exploraction">
+				<li id="menu_exploraction" class="menu_active">
 					<span class="icon">
 						<i aria-hidden="true" class="icon-home"></i>
 					</span>

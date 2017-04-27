@@ -1,3 +1,13 @@
+<?php
+if(empty($_SESSION['dejaFait'])) {
+	$_SESSION['dejaFait'] = 1;
+}
+if(empty($_SESSION['numSem'])) {
+	$_SESSION['numSem'];
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>

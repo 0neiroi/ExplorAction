@@ -1,7 +1,7 @@
 .first_div
 {
   background-color:#f28e84;
-  width:200px; height:200px;
+  /*width:200px; height:200px;*/width:280px; height:280px;
   padding: 10px;
   border-radius:50%;
   -webkit-animation: anim 0.7s 1 ease;
@@ -11,7 +11,7 @@
 }
 .second_div
 {
-  width:198px; height:198px;
+  /*width:198px; height:198px;*/width:278px; height:278px;
   border:1px solid #ffffff;
   border-radius:50%;
   -webkit-animation:anim 1s 1 ease;
@@ -21,11 +21,16 @@
 }
 .img_div
 {
-  width:200px; height:200px;
+  /*width:200px; height:200px;*/width:280px; height:280px;
   -webkit-animation:animuser 1s 1 ease;
   -moz-animation:animuser 1s 1 ease;
   -ms-animation:animuser 1s 1 ease;
   animation:animuser 1s 1 ease;
+}
+/*changement taille*/
+.img_div img
+{
+  width: 280px;
 }
 .txt_welcome
 {
@@ -50,9 +55,9 @@
 }
 .first_circle
 {
-  width: 220px; height: 220px; border-radius:50%;
+  /*width: 220px; height: 220px;*/width: 300px; height: 300px; border-radius:50%;
   padding: 10px; margin-top: -12px;
-  position: absolute; left: 50%; margin-left: -122px;
+  position: absolute; left: 50%; /*margin-left: -122px;*/margin-left: -162px;
   border-top:2px solid #ffffff;
   border-right:2px solid #ffffff;
   border-bottom:2px solid #ffffff;
