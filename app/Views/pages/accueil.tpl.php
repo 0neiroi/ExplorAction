@@ -77,6 +77,7 @@ $metier=$this->get('metier');
       function changeLayout(){
       	console.log(player.getPlayerState());
       	if(player.getPlayerState()==0){
+      
       		changeNow();
       	}
       }
@@ -117,8 +118,11 @@ $metier=$this->get('metier');
 	function changeNow(){
 			
 			document.getElementById("box").style.display = "none";
-			
+	
       		document.getElementById("index2").style.display = "block";
+      		setTimeout(function() {
+				parallax["description"].bottom();
+			}, 5000);
 	}
 </script>
 <script type="text/javascript">

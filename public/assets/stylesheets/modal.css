@@ -29,6 +29,7 @@
   width: 100%;
   z-index: 101;
   display: block;
+  background: url(../images/parallax/foreground.png) repeat 90% 110%;
   /*text-align: center;*/
 }
 

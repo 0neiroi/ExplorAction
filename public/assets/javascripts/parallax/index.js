@@ -152,11 +152,11 @@ $(function(){
     $('#foreground_1').css({backgroundPosition: '0px 0px'});
     $('#background').css({backgroundPosition: '0px 0px'});
 
-    $('#midground_1').animate({
+    $('#midground').animate({
         backgroundPosition:"(-10000px -2000px)"
     }, 240000, 'linear');
 
-    $('#foreground_1').animate({
+    $('#foreground').animate({
         backgroundPosition:"(-10000px -2000px)"
     }, 120000, 'linear');
 
